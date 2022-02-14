@@ -4,12 +4,10 @@
 **Time** : 9am - 12  
 **Place** : ACP SR2, online
 
-## Outline
-
-
 ## Sources
 [Python Guide] (https://docs.python-guide.org/)
 [Write Python with Style](https://docs.python-guide.org/writing/style/)
+[Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)
 
 ---
 # Script
