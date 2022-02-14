@@ -34,11 +34,19 @@
 - command line
 - spyder
 
-## Basics on In and Output
+## Basics on In- and Output
 - Syntax
-´´´python
+```python
 message = "Hello World";
 print(message)
-´´´
-- Comments
+```
+- Comments with #
+```python
+# Asking for user name
+name = input("What's your name?") 
+print("Hello "+ name)
+```
+- Handling error messages
+
+## Variables and Types
 
