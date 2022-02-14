@@ -5,9 +5,9 @@
 **Place** : ACP SR2, online
 
 ## Sources
-[Python Guide] (https://docs.python-guide.org/)
-[Write Python with Style](https://docs.python-guide.org/writing/style/)
-[Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)
+[Python Guide] (https://docs.python-guide.org/)  
+[Write Python with Style](https://docs.python-guide.org/writing/style/)  
+[Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)  
 
 ---
 # Script
