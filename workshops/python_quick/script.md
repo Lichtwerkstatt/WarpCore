@@ -17,7 +17,7 @@
 ## Prior Workshop
 - basic concepts of Input, Output, Calculations, Conditions, Repititions
 - workshop focuses on basic science data workflow
-- no extended data structures, loops, conditions, objects, lambdas, libraries, user interfaces etc.
+- no extended data structures, loops, conditions, objects, lambdas, libraries, user interfaces, compact code etc.
 - use ressources:
   - online guides (see above)
   - youTube tutorials
@@ -30,7 +30,15 @@
 - script languages
 - history of Python
 
-## Python Intro
+## Python Usage
 - command line
 - spyder
+
+## Basics on In and Output
+- Syntax
+´´´python
+message = "Hello World";
+print(message)
+´´´
+- Comments
 
