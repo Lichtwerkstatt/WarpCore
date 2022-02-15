@@ -45,6 +45,109 @@ name = input("What's your name?")
 print("Hello "+ name)
 ```
 - Handling error messages
+  - which file
+  - which line
+  - kind of error
 
 ## Variables and Types
+```python
+number1 = 21
+number2 = 19
+sum = number1 + number2
+print(sum)
+```
+- variables are dynamically typed
+- check for types after input and before output
+
+```python
+number1 = input("Please enter first number: ")
+number2 = input("Please enter second number: ")
+sum = float(number1) + float(number2) # int or float
+print("The sum is "+str(sum))
+```
+
+### Bonus Knowledge
+- simple data types in python
+  - **numeric** : int(eger), float, complex
+  - **text** : str(ing)
+  - **boolean** : bool(ean)
+  - **binary** : bytes, bytearray, memoryview
+- [Fancy ways](https://docs.python.org/3/tutorial/inputoutput.html) of string formatting
+
+## Conditions
+```python
+number1 = float(input("Please enter first number: "))
+number2 = float(input("Please enter second number: "))
+if number1 < number2:
+  print("First is smaller then second number")
+elif number1 > number2:
+  print("First is larger then second number")
+else:
+  print("Both numbers are equal")
+```
+- Conditions evaluate to boolean value (True/False) `type(2<5)` -> `bool`
+- arithmic compare ops : `==, !=, <, >, >=, <= `
+- boolean ops: and, or, not
+
+### Bonus Knowledge
+- short one liner if statement `x=('yes' if True else 'no')`
+
+### Task
+- write a little calculator where one can select operations (+, -, *, /)
+
+## Complex Data Types (Lists)
+- `a=[1,"hello",2,4.0]`
+- `type(a[1])`
+- complex data types come with [methods](https://www.w3schools.com/python/python_ref_list.asp)
+  - append()
+  - clear()
+  - sort()
+  - reverse()
+  - etc.
+
+### Bonus Knowledge
+- complex data types in Python:
+  - **sequence types** : list, tuple, range
+  - **mapping types**: dict
+  - **set types**: set, frozenset
+
+
+
+## Loops
+```python
+currentInput = ""
+numbers = []
+while (currentInput != "n"):
+  currentInput = input("Add a number? (n for none) : ")
+  if currentInput != "n":
+    numbers.append(float(currentInput))
+    print("You now have entered "+len(numbers)+" numbers")
+```
+
+```python
+for x in [1,2,3,4,5]:
+  print(x)
+```
+- you can use any object for counting, most common `range(start, stop, step)`
+- `even = [x for x in range(1,10) if x%2 == 0 ]`
+
+```python
+result = 0
+for x in numbers
+  result = result + x
+```
+
+## Task
+- write the same functionality for product
+- let the user choose the operation
+- let the user choose if he wants to restart or quit the program
+
+### Bonus Knowledge
+- loops allows `continue`and `break`
+
+
+
+
+
+
 
