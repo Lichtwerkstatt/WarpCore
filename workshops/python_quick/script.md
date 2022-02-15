@@ -146,6 +146,46 @@ for x in numbers
 - loops allows `continue`and `break`
 
 
+# Data Science Stack
+- Python Modules
+  - Pandas
+  - Numpy
+  - Matplotlib
+  - SciKit
+
+## Numpy Arrays
+- compare lists and arrays
+```python
+x = [a for a in range(1,10)]
+x*2
+x**2
+```
+```python
+import numpy as np
+n = np.arange(10)
+n*2
+n**2
+```
+- initialize numpy arrays
+  - np.array(x)
+  - np.zeros
+  - np.ones
+- methods
+  - .mean()
+  - .min()
+  - .max()
+
+-filter numpy arrays
+```python
+a = np.arange(10)
+a[1:4]
+a[1:-3]
+c = a>=5
+a[c]
+a[a<5]
+```
+
+## Read Data with Pandas
 
 
 
