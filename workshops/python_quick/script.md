@@ -180,12 +180,110 @@ n**2
 a = np.arange(10)
 a[1:4]
 a[1:-3]
+a[-5:]
 c = a>=5
 a[c]
 a[a<5]
 ```
 
 ## Read Data with Pandas
+- different ways of processing text files
+- convinient for CSV and Exsel is the Pandas Module:
+```python
+import pandas as pd
+df = pd.read_csv("../data/astronauts.csv")
+# df = pd.read_csv("../data/astronauts.csv", delimiter=";")
+```
+- accessing dataframe like numpy arrays:
+```python
+df.head()
+len(df)
+df["Name"]
+df["Name"][20]
+for name in df["name"]:
+  print(name)
+
+#accessing row:
+df.iloc[21]
+df.iloc[4:8]
+df.iloc[21]["Name"]
+type(df.iloc[20]["Gender"])
+```
+
+## Rebuilding Data Structures based on DataFrame
+```python
+for row in df.iterrows():
+  pos = row[0]
+  data = row[1]
+  print(pos)
+  print(data)
+#shorter:
+for pos, data in df.iterrows():
+  print(pos)
+  print(data)
+```
+
+## Filtering Data in Pandas
+```python
+df["Year"]
+df["Year"] < 1990
+df[df["Year"] < 1990]
+# combine filters
+df2 = df[df["Year"] < 1990]
+df3 = df[df["Gender"] == "Male"]
+
+# combine with boolean operators
+filter1 = df["Year"] == 1990
+filter2 = df["Year"] < 1960
+df[(filter1)|(filter2)] # use bitwise boolean operators & | ^ ~ 
+```
+
+## Sort Data in Pandas
+```python
+dfSort= df.sort_values("Name", ascending=False)
+names = [] 
+for name in dfSort["Name"]:
+    names.append(name) # build fields out of DataFrames
+pd.DataFrame(names) #build DataFrames out of fields
+```
+
+## Matplotlib
+```python
+import matplotlib.pyplot as plt
+plt.plot([1,2,3],[-3,4,5], color="#ff0000", linestyle="dashed", marker="o", label="Value 1")
+plt.plot([1,2,4],[3,2,1], color="#00ff00", label="Value 2")
+plt.legend()
+plt.show()
+```
+- other plot types in matplotlib
+  - **basic** : plot, scatter, bar,...
+  - **fields** : contour, colormesh, quiver, steamplot, ...
+  - **statistics** : histogram, boxplot, pie charts
+  - **unstructured** : tricontour, triplot
+
+```python
+excel = pd.read_excel("daten.xlsx")
+year = df["Jahr"]
+sales = df["Umsatz"]
+plt.plot(year,sales)
+plt.show()
+```
+
+```python
+df = pd.read_csv("../data/names.csv")
+df2 = df[df["Name"] == "Anna"]
+df3 = df2[df2["Gender"] == "F"]
+df4 = df3[df3["State"] == "CA"]
+df5 = df4.sort_values("Year")
+plt.plot(df5["Year"], df5["Count"])
+plt.legend()
+plt.show()
+```
+
+
+
+
+
 
 
 
