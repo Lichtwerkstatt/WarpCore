@@ -280,6 +280,38 @@ plt.legend()
 plt.show()
 ```
 
+## Linear and Polynomial Regression
+
+```python
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.linear_model import LinearRegression
+
+x = np.arange(-10,10,2)
+y = (x-4)**2 + x -10 + np.random.normal(0,1,x.shape)
+
+plt.figure(figsize=(10,6))
+plt.scatter(x, y)
+plt.show()
+
+poly = PolynomialFeatures(degree=2, include_bias=False)
+poly_features = poly.fit_transform(x.reshape(-1, 1))
+
+poly_reg_model = LinearRegression()
+poly_reg_model.fit(poly_features, y)
+y_predicted = poly_reg_model.predict(poly_features)
+
+plt.figure(figsize=(10, 6))
+plt.title("Your first polynomial regression – congrats! :)", size=16)
+plt.scatter(x, y)
+plt.plot(x, y_predicted, c="red")
+plt.show()
+
+//https://data36.com/polynomial-regression-python-scikit-learn/
+```
+
 
 
 
