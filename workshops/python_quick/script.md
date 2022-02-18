@@ -210,7 +210,13 @@ a[a<5]
 ```
 
 ## Read Data with Pandas
-- different ways of processing text files
+- different ways of processing text files: 
+```python
+with open("datei.csv") as file:
+    for line in file:
+        data = line.strip().split(";")
+        print(data[0] + ": " + data[1])
+```
 - convinient for CSV and Exsel is the Pandas Module:
 ```python
 import pandas as pd
