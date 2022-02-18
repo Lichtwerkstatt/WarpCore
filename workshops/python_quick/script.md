@@ -1,20 +1,25 @@
-# IoT with ESP-32 Workshop
+# Introduction into Python (Quick)
 
 **Date** : February, 19th 2022  
 **Time** : 9am - 12  
 **Place** : ACP SR2, online
 
 ## Sources
-[Python Guide](https://docs.python-guide.org/)  
-[Write Python with Style](https://docs.python-guide.org/writing/style/)  
-[Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)  
+* [Official Python Documentation](https://docs.python.org/3/)
+* [Python Guide](https://docs.python-guide.org/)  
+* [Write Python with Style](https://docs.python-guide.org/writing/style/)  
+* [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)  
+
+## Workshop Prep
+* Download and Install [Anaconda](https://www.anaconda.com/products/individual)
+* [ ] Download Data Package and prepare a workshop folder 
 
 ---
 # Script
 
 ## Prior Workshop
-- basic concepts of Input, Output, Calculations, Conditions, Repititions
-- workshop focuses on basic science data workflow
+- content = basic concepts of Input, Output, Calculations, Conditions, Repititions
+- goal: learn how to program and work in a basic science data workflow
 - no extended data structures, loops, conditions, objects, lambdas, libraries, user interfaces, compact code etc.
 - use ressources:
   - online guides (see above)
@@ -30,15 +35,28 @@
 
 ## Python Usage
 - command line
+  - interactive mode
+  - run Python file
 - spyder
+  - Editor
+    - AutoComplete
+    - Syntax Highlighting
+    - Context help
+  - Console Window
+  - Variables Overview
 
-## Basics on In- and Output
-- Syntax
+## Syntax, Error Handling and Basics on In- and Output
+- [Syntax](https://www.w3schools.com/python/python_syntax.asp)
+  - line by line
+  - intended blocks
+  - [comments](https://www.w3schools.com/python/python_comments.asp)
+- Variables
 ```python
-message = "Hello World";
+# This is a comment
+message = "Hello World" 
 print(message)
 ```
-- Comments with #
+- Input
 ```python
 # Asking for user name
 name = input("What's your name?") 
@@ -57,7 +75,9 @@ sum = number1 + number2
 print(sum)
 ```
 - variables are dynamically typed
-- check for types after input and before output
+- Using Python [Operators](https://www.w3schools.com/python/python_operators.asp)
+  - different meanings based on data type (for example plus) 
+- check for types after input and before output = [TypeCasting](https://www.w3schools.com/python/python_casting.asp)
 
 ```python
 number1 = input("Please enter first number: ")
@@ -67,14 +87,14 @@ print("The sum is "+str(sum))
 ```
 
 ### Bonus Knowledge
-- simple data types in python
+- simple [data types](https://www.w3schools.com/python/python_datatypes.asp) in python
   - **numeric** : int(eger), float, complex
   - **text** : str(ing)
   - **boolean** : bool(ean)
   - **binary** : bytes, bytearray, memoryview
 - [Fancy ways](https://docs.python.org/3/tutorial/inputoutput.html) of string formatting
 
-## Conditions
+## [Conditions](https://www.w3schools.com/python/python_conditions.asp)
 ```python
 number1 = float(input("Please enter first number: "))
 number2 = float(input("Please enter second number: "))
@@ -95,9 +115,10 @@ else:
 ### Task
 - write a little calculator where one can select operations (+, -, *, /)
 
-## Complex Data Types (Lists)
-- `a=[1,"hello",2,4.0]`
-- `type(a[1])`
+## Complex Data Types ([Lists](https://www.w3schools.com/python/python_lists.asp))
+- define: `a=[1,"hello",2,4.0]`
+- access: `a[0]`
+- data types: `type(a[1])`
 - complex data types come with [methods](https://www.w3schools.com/python/python_ref_list.asp)
   - append()
   - clear()
@@ -107,13 +128,14 @@ else:
 
 ### Bonus Knowledge
 - complex data types in Python:
-  - **sequence types** : list, tuple, range
-  - **mapping types**: dict
-  - **set types**: set, frozenset
+  - **sequence types** : [tuple](https://www.w3schools.com/python/python_tuples.asp), range
+  - **mapping types**: [dict](https://www.w3schools.com/python/python_dictionaries.asp)
+  - **set types**: [set](https://www.w3schools.com/python/python_sets.asp), frozenset
 
 
 
 ## Loops
+- [while](https://www.w3schools.com/python/python_while_loops.asp) loop:
 ```python
 currentInput = ""
 numbers = []
@@ -124,6 +146,7 @@ while (currentInput != "n"):
     print("You now have entered "+len(numbers)+" numbers")
 ```
 
+-[for](https://www.w3schools.com/python/python_for_loops.asp) loop:
 ```python
 for x in [1,2,3,4,5]:
   print(x)
@@ -148,10 +171,10 @@ for x in numbers
 
 # Data Science Stack
 - Python Modules
-  - Pandas
-  - Numpy
-  - Matplotlib
-  - SciKit
+  - [Pandas](https://pandas.pydata.org/) ([Tutorial](https://www.w3schools.com/python/pandas/default.asp))
+  - [Numpy](https://numpy.org/) ([Tutorial](https://www.w3schools.com/python/numpy/default.asp))
+  - [MatPlotLib](https://matplotlib.org/) ([Tutorial](https://www.w3schools.com/python/matplotlib_intro.asp))
+  - [SciKit](https://scikit-learn.org/stable/)
 
 ## Numpy Arrays
 - compare lists and arrays
