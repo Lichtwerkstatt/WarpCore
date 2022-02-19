@@ -323,10 +323,14 @@ x = x.reshape((-1,1))
 
 regr = linear_model.LinearRegression()
 regr.fit(x,y)
+print(regr.intercept_, regr.coef_)
 y_pred = regr.predict(x)
+
+y_eval = regr.coef_[0]*x + regr.intercept_
 
 plt.scatter(x,y)
 plt.plot(x,y_pred, color="red")
+plt.plot(x,y_eval, color="yellow")
 plt.show()
 ```
 
@@ -345,6 +349,7 @@ poly_features = poly.fit_transform(x.reshape(-1, 1))
 
 poly_reg_model = LinearRegression()
 poly_reg_model.fit(poly_features, y)
+print(poly_reg_model.intercept_, poly_reg_model.coef_)
 y_predicted = poly_reg_model.predict(poly_features)
 
 plt.figure(figsize=(10, 6))
