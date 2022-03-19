@@ -1,7 +1,7 @@
 # Data Science Stack
 - Python Modules
   - [Pandas](https://pandas.pydata.org/) ([Tutorial](https://www.w3schools.com/python/pandas/default.asp))
-  - [Numpy](https://numpy.org/) ([Tutorial](https://www.w3schools.com/python/numpy/default.asp))
+  - [Numpy](https://numpy.org/) ([Tutorial](https://www.w3schools.com/python/numpy/default.asp) / [Tutorial](https://cs231n.github.io/python-numpy-tutorial/) )
   - [MatPlotLib](https://matplotlib.org/) ([Tutorial](https://www.w3schools.com/python/matplotlib_intro.asp))
   - [SciKit](https://scikit-learn.org/stable/)
 
@@ -30,10 +30,18 @@ n**2
   - np.array(x)
   - np.zeros
   - np.ones
+  - np.full
+  - np.eye
+  - np.random.random((2,2))
 - methods
   - .mean()
   - .min()
   - .max()
+  - .shape()
+  - np.sum(x) // np.sum(x, axis=0)) column/row wise
+- Datatypes
+  - .dtype
+  - np.array([1,2], dtype=np.float64)
 
 ## Filter Numpy Arrays
 ```python
@@ -46,7 +54,42 @@ a[c]
 a[a<5]
 ```
 
-## Read Data with Pandas
+## Array Math
+- np.add(x,y) === x+y //all element wise
+- * element wise, no matrix product
+- v.dot(w) === np.dot(v,y) // inner product of vectors
+- x.dot(v) === np.dot(x,y) // vector matrix product
+- x.dot(y) // matrix product
+
+## Broadcasting
+```python
+x = np.array([[1,2,3], [4,5,6], [7,8,9], [10, 11, 12]])
+v = np.array([1, 0, 1])
+y = np.empty_like(x)  
+for i in range(4):
+    y[i, :] = x[i, :] + v
+print(y)
+```
+with broadcasting
+```python
+x = np.array([[1,2,3], [4,5,6], [7,8,9], [10, 11, 12]])
+v = np.array([1, 0, 1])
+y = x + v  # Add v to each row of x using broadcasting
+print(y) 
+```
+
+## Exercises
+- generate 2 random 2x3 matrizes and add them element wise
+- multiply a random matrix with a scalar
+- convert a random 1d array into a 3d array
+- convert an array of 0s and 1s into booleans
+- generate an array with only even numbers
+- get an array of positions where two numbers match
+- generate an array with random numbers following normal distribution
+- calculate array of sines for each element of an array
+
+
+# Read Data with Pandas
 - different ways of processing text files: 
 ```python
 with open("datei.csv") as file:
