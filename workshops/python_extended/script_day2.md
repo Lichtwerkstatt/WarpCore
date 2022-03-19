@@ -7,6 +7,24 @@
 
 # Introduction into Jupyter Notebooks
 
+- **ibynb** : Text File Format for Jupyter Notebooks, holds source code, markup and metadata
+- **Kernel** : Engine, runnning python (does not stop when closing file) or other programming language
+- **Cell** : container for Python Code or Markdown, Structures Jupyter File
+- Cells can get executed independently
+- `Esc / Enter` : Toggle Edit/Command Mode
+- `A / B ` : Add cell above or below
+- `M / Y `: turn cell into markdown/code cell
+-  `Shift+ Up/Down // Shift+M`: select multiple cells, merge cells
+-  `Ctrl + Shift + -` : Split cell at cursor
+- `Ctrl+Enter` : Run Cell
+- `Ctrl+Shift+P` : Show Command List
+
+## Tutorial
+
+- `print('Hello World')`
+- `import time / time.sleep(3)`
+- `def say_hello(name): return 'hello' + name
+
 
 # Introduction into Numpy 
 
