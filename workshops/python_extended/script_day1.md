@@ -14,10 +14,8 @@
 * Download and Install [Anaconda](https://www.anaconda.com/products/individual)
 * [ ] Download Data Package and prepare a workshop folder 
 
----
-# Script
 
-## Prior Workshop
+# Prior Workshop
 - content = basic concepts of Input, Output, Calculations, Conditions, Repititions
 - goal: learn how to program and work in a basic science data workflow
 - no extended data structures, loops, conditions, objects, lambdas, libraries, user interfaces, compact code etc.
@@ -27,15 +25,19 @@
   - stack overflow (google error messages)
 - Practice! Practice! Practice!
 
-## Introduction
+# Introduction
 - Programming a von-Neumann-architecture
-- machine and high level programming
-- script languages
+  - Memory, BUS, CPU
+  - ALU, operators, parameters
+- machine code, high level programming and compilers
+- script languages (Bash, R, JS, ...)
 - history of Python
+- Python Modules
 
 ## Python Usage
 - command line
   - interactive mode
+    - print, assign operator, arithm. operator
   - run Python file
 - spyder
   - Editor
@@ -67,13 +69,44 @@ print("Hello "+ name)
   - which line
   - kind of error
 
-## Variables and Types
+- Debugging
+
+# Variables 
+
+## Operators
 ```python
+#Arithm. Operators
+2+2
+50-5*6
+8/5
+17//3
+17%3
+2**7
+8/2 #division returns float
+```
+
+**Tip**: In interactive Mode `_` returns last value
+
+```python
+# Assign Operator
 number1 = 21
 number2 = 19
 sum = number1 + number2
 print(sum)
 ```
+
+**Exercise:** Write a tax calculator, returning the price inkl. MwSt. (16%)
+
+## Strings
+```python
+'spam eggs'
+"spam eggs"
+"'spam' eggs"
+'\'spam\' eggs'
+"Hello \n World!"
+"hello" + "world"
+```
+
 - variables are dynamically typed
 - Using Python [Operators](https://www.w3schools.com/python/python_operators.asp)
   - different meanings based on data type (for example plus) 
@@ -93,8 +126,24 @@ print("The sum is "+str(sum))
   - **boolean** : bool(ean)
   - **binary** : bytes, bytearray, memoryview
 - [Fancy ways](https://docs.python.org/3/tutorial/inputoutput.html) of string formatting
+- Assign operators +=, -=, ...
 
-## [Conditions](https://www.w3schools.com/python/python_conditions.asp)
+# [Conditions](https://www.w3schools.com/python/python_conditions.asp)
+
+## Comparison Operators
+```python
+true
+false
+3 > 2
+x==5
+x > 5
+x > 5 and x < 10
+not x > 5
+x is 5
+```
+
+## if then else
+
 ```python
 number1 = float(input("Please enter first number: "))
 number2 = float(input("Please enter second number: "))
@@ -115,7 +164,7 @@ else:
 ### Task
 - write a little calculator where one can select operations (+, -, *, /)
 
-## Complex Data Types ([Lists](https://www.w3schools.com/python/python_lists.asp))
+# Complex Data Types ([Lists](https://www.w3schools.com/python/python_lists.asp))
 - define: `a=[1,"hello",2,4.0]`
 - access: `a[0]`
 - data types: `type(a[1])`
@@ -134,7 +183,7 @@ else:
 
 
 
-## Loops
+# Loops
 - [while](https://www.w3schools.com/python/python_while_loops.asp) loop:
 ```python
 currentInput = ""
