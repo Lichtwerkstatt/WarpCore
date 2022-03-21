@@ -107,7 +107,7 @@ print(y)
 - calculate array of sines for each element of an array
 
 
-# Read Data with Pandas
+# Pandas
 - different ways of processing text files: 
 ```python
 with open("datei.csv") as file:
@@ -174,7 +174,10 @@ for name in dfSort["Name"]:
 pd.DataFrame(names) #build DataFrames out of fields
 ```
 
-## Matplotlib
+## Workflow Example Pandas
+[Refugees Data](https://www.physik.uzh.ch/~python/python_2018-06/lecture_pandas/Refugees.pdf)
+
+# Matplotlib
 ```python
 import matplotlib.pyplot as plt
 plt.plot([1,2,3],[-3,4,5], color="#ff0000", linestyle="dashed", marker="o", label="Value 1")
