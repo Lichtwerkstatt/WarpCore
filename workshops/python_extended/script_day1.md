@@ -209,13 +209,84 @@ for x in numbers
   result = result + x
 ```
 
-## Task
+### Task
 - write the same functionality for product
 - let the user choose the operation
 - let the user choose if he wants to restart or quit the program
 
 ### Bonus Knowledge
 - loops allows `continue`and `break`
+
+## Functions
+
+```python
+def myFunction():
+  print("Hello!")
+  
+def myFunction(param):
+
+def myFunction(param = "Default")
+
+*args # Argument List
+
+def myFunction(c3, c2, c1): ...
+myFunction(c1="1", c2="2", c3="3"
+
+**kwargs # Argument Dictionary
+
+```
+
+**Exercise:**
+- Write a function `fibo(n)` which calculates the fibonacci number of n
+- Add a obligatory parameter for returning a list
+- Think of different ways for implementing `fibo` (list, iterative, recursive)
+
+```python
+def fibo_recursive(n):
+    if n == 0 :
+        return 0
+    elif n == 1 :
+        return 1
+    else:
+        return(fibo_recursive(n-1) + fibo_recursive(n-2))
+    
+def fibo_iterative(n):
+    a = 0
+    b = 1
+    # a,b = 0,1
+    if n == 0 : 
+        return 0
+    elif n == 1 :
+        return 1
+    else :
+        for i in range(1,n):
+            summe = a+b
+            a = b
+            b = summe
+            # a, b = b, a+b
+    return(b)
+    
+def fibo_withOptionalList(n, *list):
+    result = [0,1]
+    if n < 2:
+        return result[0:n+1]
+    else :
+        for i in range(2,n+1):
+            result.append(result[i-1]+result[i-2])
+    if list and list[0]:
+        return result
+    else :
+        return result[n]
+```
+
+## Modules
+
+```python
+import fibonacci
+import fibonacci as fibo
+from fibonacci import fibo_recursive
+```
+
 
 
 
