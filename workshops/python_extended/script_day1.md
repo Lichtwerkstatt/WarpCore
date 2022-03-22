@@ -258,6 +258,8 @@ while (userInput != randomNumber):
         print(str(userInput)+" war die richtige Zahl!")
         print("Du hast nur "+ str(count)+ " Versuche gebraucht...")
 ```
+**Variation**
+- Write a program that plays Rock, Paper, Scissors better than random against a human. Evaluate long term win or loosing.
 
 ### Task
 Sort all members of a List
@@ -334,8 +336,12 @@ import fibonacci
 import fibonacci as fibo
 from fibonacci import fibo_recursive
 ```
-
-
+## Final Tasks for Practice
+- write a program that shows the next leap years
+- calculate prime numbers between 1 and 100
+- find the max/min of a list
+- Write a function that takes a list of strings an prints them, one per line, in a rectangular frame of \*
+- Turn a decimal into a binary number and other way around
 
 
 
