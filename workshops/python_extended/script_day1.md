@@ -118,6 +118,11 @@ number2 = input("Please enter second number: ")
 sum = float(number1) + float(number2) # int or float
 print("The sum is "+str(sum))
 ```
+- show step by step
+- breakpoints
+- int input
+- str output
+- float inputs
 
 ### Bonus Knowledge
 - simple [data types](https://www.w3schools.com/python/python_datatypes.asp) in python
