@@ -142,6 +142,7 @@ print("The sum is "+str(sum))
 - [Fancy ways](https://docs.python.org/3/tutorial/inputoutput.html) of string formatting
 
 - Assign operators +=, -=, ...
+- Combined Assign a, b = 2, 4
 
 # [Conditions](https://www.w3schools.com/python/python_conditions.asp)
 
