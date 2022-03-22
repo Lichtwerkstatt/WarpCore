@@ -229,6 +229,9 @@ for x in numbers
 - larger, smaller
 - count rounds until number guessed correctly
 
+## Task
+- write little phonebook app with dictionaries
+
 ### Bonus Knowledge
 - loops allows `continue`and `break`
 
