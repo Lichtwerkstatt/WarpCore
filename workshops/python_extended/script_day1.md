@@ -212,25 +212,40 @@ for x in [1,2,3,4,5]:
 - you can use any object for counting, most common `range(start, stop, step)`
 - `even = [x for x in range(1,10) if x%2 == 0 ]`
 
+### Task
+Sum up all Elements
 ```python
 result = 0
 for x in numbers
   result = result + x
 ```
-
-### Task
-- write the same functionality for product
-- let the user choose the operation
-- let the user choose if he wants to restart or quit the program
-
 ### Task
 - Guessing ganme
 - Guess Number
 - larger, smaller
 - count rounds until number guessed correctly
 
-## Task
-- write little phonebook app with dictionaries
+```python
+import random
+
+userInput = -1
+randomNumber = random.randint(0, 100)
+count = 0
+while (userInput != randomNumber):
+    count += 1
+    userInput = int(input("Die Zahl für deinen "+str(count)+"-ten Versuch: "))
+    if userInput > randomNumber:
+        print("zu hoch!")
+    elif userInput < randomNumber:
+        print("zu niedrig!")
+    else:
+        print("Gewonnen!")
+        print(str(userInput)+" war die richtige Zahl!")
+        print("Du hast nur "+ str(count)+ " Versuche gebraucht...")
+```
+
+### Task
+Sort all members of a List
 
 ### Bonus Knowledge
 - loops allows `continue`and `break`
