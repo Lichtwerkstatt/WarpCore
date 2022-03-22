@@ -52,6 +52,7 @@
   - line by line
   - intended blocks
   - [comments](https://www.w3schools.com/python/python_comments.asp)
+  - Capitals matter
 - Variables
 ```python
 # This is a comment
@@ -147,6 +148,8 @@ not x > 5
 x is 5
 ```
 
+-combinations with `and`, `or`, `not`
+
 ## if then else
 
 ```python
@@ -179,12 +182,13 @@ else:
   - sort()
   - reverse()
   - etc.
+- comparison op `in`
 
 ### Bonus Knowledge
 - complex data types in Python:
-  - **sequence types** : [tuple](https://www.w3schools.com/python/python_tuples.asp), range
-  - **mapping types**: [dict](https://www.w3schools.com/python/python_dictionaries.asp)
-  - **set types**: [set](https://www.w3schools.com/python/python_sets.asp), frozenset
+  - **sequence types** : [tuple](https://www.w3schools.com/python/python_tuples.asp), ()
+  - **mapping types**: [dict](https://www.w3schools.com/python/python_dictionaries.asp) {:}
+  - **set types**: [set](https://www.w3schools.com/python/python_sets.asp), frozenset {}
 
 
 
@@ -218,6 +222,12 @@ for x in numbers
 - write the same functionality for product
 - let the user choose the operation
 - let the user choose if he wants to restart or quit the program
+
+### Task
+- Guessing ganme
+- Guess Number
+- larger, smaller
+- count rounds until number guessed correctly
 
 ### Bonus Knowledge
 - loops allows `continue`and `break`
