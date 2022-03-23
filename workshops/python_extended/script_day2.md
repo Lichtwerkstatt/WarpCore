@@ -45,21 +45,33 @@ n**2
 
 ## Initialize Numpy Arrays
 - initialize numpy arrays
-  - np.array(x)
+  - a = np.arange(15).reshape(3,5)
+  - arange (1,10,0.5)
+  - linspace(0,2,9)
+  - np.array([1,2,3,4])
   - np.zeros
   - np.ones
   - np.full
   - np.eye
   - np.random.random((2,2))
-- methods
-  - .mean()
-  - .min()
-  - .max()
-  - .shape()
-  - np.sum(x) // np.sum(x, axis=0)) column/row wise
+- metadata
+  - .shape
+  - .ndim
+  - .dtype.name
+  - .size    
 - Datatypes
-  - .dtype
   - np.array([1,2], dtype=np.float64)
+
+## Ops
+- .sum
+- .sum(axis=0)
+- .cumsum
+- .min
+- .max
+- .reshape() -1
+- .T (.T.shape)
+- np.vstack((a,b))
+- np.hstack((a,b))
 
 ## Filter Numpy Arrays
 ```python
