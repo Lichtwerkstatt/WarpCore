@@ -133,6 +133,13 @@ import pandas as pd
 df = pd.read_csv("../data/astronauts.csv")
 # df = pd.read_csv("../data/astronauts.csv", delimiter=";")
 ```
+
+- define pandas data frame by hand:
+- pd.Series([1,2,3,4,5]) // PRIMES!
+- pd.Series([...], index=['a','b','c',...])
+- series.index / series.values
+- pd.DataFrame({"primes":series, "fibo":fibo(5))
+
 - accessing dataframe like numpy arrays:
 ```python
 df.head()
