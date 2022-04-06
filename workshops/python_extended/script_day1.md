@@ -38,6 +38,8 @@
 - command line
   - interactive mode
     - print, assign operator, arithm. operator
+    - evaluation of variables and terms
+    - _
   - run Python file
 - spyder
   - Editor
@@ -49,9 +51,10 @@
 
 ## Syntax, Error Handling and Basics on In- and Output
 - [Syntax](https://www.w3schools.com/python/python_syntax.asp)
-  - line by line
+  - line by line (Exception ;)
   - intended blocks
   - [comments](https://www.w3schools.com/python/python_comments.asp)
+  - Capitals matter
 - Variables
 ```python
 # This is a comment
@@ -73,30 +76,6 @@ print("Hello "+ name)
 
 # Variables 
 
-## Operators
-```python
-#Arithm. Operators
-2+2
-50-5*6
-8/5
-17//3
-17%3
-2**7
-8/2 #division returns float
-```
-
-**Tip**: In interactive Mode `_` returns last value
-
-```python
-# Assign Operator
-number1 = 21
-number2 = 19
-sum = number1 + number2
-print(sum)
-```
-
-**Exercise:** Write a tax calculator, returning the price inkl. MwSt. (16%)
-
 ## Strings
 ```python
 'spam eggs'
@@ -107,6 +86,34 @@ print(sum)
 "hello" + "world"
 ```
 
+## Integer
+2+2
+50-5*6
+
+## Operators
+```python
+#Arithm. Operators
+8/5
+17//3
+17%3
+2**7
+8/2 #division returns float
+```
+**Task**
+- Guess what `**`, `//` and `%` does
+- find out order in which operators are applied ((), **, +-, \*/%//, + - )
+- what does 1j mean? -> 1j**2
+- is 10/2 the same as 2+3 ? -> 5 is 5.0
+
+**Tip**: In interactive Mode `_` returns last value
+
+```python
+# Assign Operator
+number1 = 21
+number2 = 19
+sum = number1 + number2
+print(sum)
+```
 - variables are dynamically typed
 - Using Python [Operators](https://www.w3schools.com/python/python_operators.asp)
   - different meanings based on data type (for example plus) 
@@ -118,6 +125,13 @@ number2 = input("Please enter second number: ")
 sum = float(number1) + float(number2) # int or float
 print("The sum is "+str(sum))
 ```
+- show step by step
+- breakpoints
+- int input
+- str output
+- float inputs
+
+**Exercise:** Write a tax calculator, returning the price inkl. MwSt. (16%)
 
 ### Bonus Knowledge
 - simple [data types](https://www.w3schools.com/python/python_datatypes.asp) in python
@@ -125,8 +139,10 @@ print("The sum is "+str(sum))
   - **text** : str(ing)
   - **boolean** : bool(ean)
   - **binary** : bytes, bytearray, memoryview
-- [Fancy ways](https://docs.python.org/3/tutorial/inputoutput.html) of string formatting
+- [Fancy ways](https://docs.python.org/3/tutorial/inputoutput.html) of string formatting  
+  print(f'Hallo {a} und {b}')
 - Assign operators +=, -=, ...
+- Combined Assign a, b = 2, 4
 
 # [Conditions](https://www.w3schools.com/python/python_conditions.asp)
 
@@ -141,6 +157,8 @@ x > 5 and x < 10
 not x > 5
 x is 5
 ```
+
+-combinations with `and`, `or`, `not`
 
 ## if then else
 
@@ -162,6 +180,8 @@ else:
 - short one liner if statement `x=('yes' if True else 'no')`
 
 ### Task
+- find out if number is odd or even
+- is a number the square root of another number
 - write a little calculator where one can select operations (+, -, *, /)
 
 # Complex Data Types ([Lists](https://www.w3schools.com/python/python_lists.asp))
@@ -174,12 +194,13 @@ else:
   - sort()
   - reverse()
   - etc.
+- comparison op `in`
 
 ### Bonus Knowledge
 - complex data types in Python:
-  - **sequence types** : [tuple](https://www.w3schools.com/python/python_tuples.asp), range
-  - **mapping types**: [dict](https://www.w3schools.com/python/python_dictionaries.asp)
-  - **set types**: [set](https://www.w3schools.com/python/python_sets.asp), frozenset
+  - **sequence types** : [tuple](https://www.w3schools.com/python/python_tuples.asp), ()
+  - **mapping types**: [dict](https://www.w3schools.com/python/python_dictionaries.asp) {:}
+  - **set types**: [set](https://www.w3schools.com/python/python_sets.asp), frozenset {}
 
 
 
@@ -203,16 +224,45 @@ for x in [1,2,3,4,5]:
 - you can use any object for counting, most common `range(start, stop, step)`
 - `even = [x for x in range(1,10) if x%2 == 0 ]`
 
+### Task
+Sum up all Elements
 ```python
 result = 0
 for x in numbers
   result = result + x
 ```
+### Task
+Reverse a String
 
 ### Task
-- write the same functionality for product
-- let the user choose the operation
-- let the user choose if he wants to restart or quit the program
+- Guessing ganme
+- Guess Number
+- larger, smaller
+- count rounds until number guessed correctly
+
+```python
+import random
+
+userInput = -1
+randomNumber = random.randint(0, 100)
+count = 0
+while (userInput != randomNumber):
+    count += 1
+    userInput = int(input("Die Zahl für deinen "+str(count)+"-ten Versuch: "))
+    if userInput > randomNumber:
+        print("zu hoch!")
+    elif userInput < randomNumber:
+        print("zu niedrig!")
+    else:
+        print("Gewonnen!")
+        print(str(userInput)+" war die richtige Zahl!")
+        print("Du hast nur "+ str(count)+ " Versuche gebraucht...")
+```
+**Variation**
+- Write a program that plays Rock, Paper, Scissors better than random against a human. Evaluate long term win or loosing.
+
+### Task
+Sort all members of a List
 
 ### Bonus Knowledge
 - loops allows `continue`and `break`
@@ -286,8 +336,12 @@ import fibonacci
 import fibonacci as fibo
 from fibonacci import fibo_recursive
 ```
-
-
+## Final Tasks for Practice
+- write a program that shows the next leap years
+- calculate prime numbers between 1 and 100
+- find the max/min of a list
+- Write a function that takes a list of strings an prints them, one per line, in a rectangular frame of \*
+- Turn a decimal into a binary number and other way around
 
 
 

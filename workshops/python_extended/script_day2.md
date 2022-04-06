@@ -45,21 +45,33 @@ n**2
 
 ## Initialize Numpy Arrays
 - initialize numpy arrays
-  - np.array(x)
+  - a = np.arange(15).reshape(3,5)
+  - arange (1,10,0.5)
+  - linspace(0,2,9)
+  - np.array([1,2,3,4])
   - np.zeros
   - np.ones
   - np.full
   - np.eye
   - np.random.random((2,2))
-- methods
-  - .mean()
-  - .min()
-  - .max()
-  - .shape()
-  - np.sum(x) // np.sum(x, axis=0)) column/row wise
+- metadata
+  - .shape
+  - .ndim
+  - .dtype.name
+  - .size    
 - Datatypes
-  - .dtype
   - np.array([1,2], dtype=np.float64)
+
+## Ops
+- .sum
+- .sum(axis=0)
+- .cumsum
+- .min
+- .max
+- .reshape() -1
+- .T (.T.shape)
+- np.vstack((a,b))
+- np.hstack((a,b))
 
 ## Filter Numpy Arrays
 ```python
@@ -107,7 +119,7 @@ print(y)
 - calculate array of sines for each element of an array
 
 
-# Read Data with Pandas
+# Pandas
 - different ways of processing text files: 
 ```python
 with open("datei.csv") as file:
@@ -121,6 +133,13 @@ import pandas as pd
 df = pd.read_csv("../data/astronauts.csv")
 # df = pd.read_csv("../data/astronauts.csv", delimiter=";")
 ```
+
+- define pandas data frame by hand:
+- pd.Series([1,2,3,4,5]) // PRIMES!
+- pd.Series([...], index=['a','b','c',...])
+- series.index / series.values
+- pd.DataFrame({"primes":series, "fibo":fibo(5))
+
 - accessing dataframe like numpy arrays:
 ```python
 df.head()
@@ -174,7 +193,10 @@ for name in dfSort["Name"]:
 pd.DataFrame(names) #build DataFrames out of fields
 ```
 
-## Matplotlib
+## Workflow Example Pandas
+[Refugees Data](https://www.physik.uzh.ch/~python/python_2018-06/lecture_pandas/Refugees.pdf)
+
+# Matplotlib
 ```python
 import matplotlib.pyplot as plt
 plt.plot([1,2,3],[-3,4,5], color="#ff0000", linestyle="dashed", marker="o", label="Value 1")
