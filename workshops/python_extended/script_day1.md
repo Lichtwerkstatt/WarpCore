@@ -217,7 +217,7 @@ for x in numbers
 ### Bonus Knowledge
 - loops allows `continue`and `break`
 
-## Functions
+# Functions
 
 ```python
 def myFunction():
@@ -279,7 +279,7 @@ def fibo_withOptionalList(n, *list):
         return result[n]
 ```
 
-## Modules
+# Modules
 
 ```python
 import fibonacci
