@@ -3,6 +3,8 @@ v1.0 Johannes Kretzschmar (LWJ)
 
 ## Content
 
+# Basics of Lasercutting
+
 # Operating a Lasercutter (Epilog Helix 75W)
 - Epilog [Website](https://www.epiloglaser.de/Lasermaschinen/minihelix-techspecs.htm)
 - [Manual](https://www.epiloglaser.com/assets/downloads/manuals/legend-manual-web.pdf)
@@ -27,7 +29,7 @@ v1.0 Johannes Kretzschmar (LWJ)
 
 ## Lasercutting or -engraving
 1. use the Printer Driver, Visicut etc to prepare your files and load them on the Lasercutter
-2. if necessary: move Homeposition
+2. if necessary: **Move Home Position**
    - switch on Red Laser Pointer (if necessary)
    - Press X/Y Off and GO
    - Move the laser head to the new Home Position by hand
