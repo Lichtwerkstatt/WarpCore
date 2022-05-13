@@ -26,6 +26,23 @@ free Open Source 3D Suite (Modelling, Rendering, Animation etc.)
 
 ### Cleanup
 
+# Materials 
+
+Materials are stored in the shelf in the back of E010. Please note the separation between PLA and non-PLA materials. Please contact the orga team for any wishes regarding type, color and further properties of FDM materials. **Do NOT use any specific labeled materials without asking first!** Materials most commonly used in Lichtwerkstatt are
+
+- [**PLA**](https://help.prusa3d.com/article/pla_2062)   
+most standard, ecological, cheap and well to process  
+- [**PETG**](https://help.prusa3d.com/article/petg_2059)  (Polyethylenterephthalat)   
+more durable and heat-resistant alternative to PLA
+- [**ABS**](https://help.prusa3d.com/article/abs_2058)  
+most commonly used for durable and heat-resistant pieces  
+rarely used in Lichtwerkstatt due smell and printing temperature requirements
+- [**TPU**](https://help.prusa3d.com/article/flexible-materials_2057)  
+flexible, hard to print, use only for small parts/connecting pieces
+- [**PVA**](https://help.prusa3d.com/article/water-soluble-bvoh-pva_167012)  
+water-soluble, perfect for hard to reach support structures  
+rarely used in Lichtwerkstatt due missing appropriate storage options
+
 # Slicing
 
 ## Software for Slicing
