@@ -8,6 +8,7 @@ v1.0 Johannes Kretzschmar (LWJ)
 # Operating a Lasercutter (Epilog Helix 75W)
 - Epilog [Website](https://www.epiloglaser.de/Lasermaschinen/minihelix-techspecs.htm)
 - [Manual](https://www.epiloglaser.com/assets/downloads/manuals/legend-manual-web.pdf)
+- [Video Tutorial](https://www.youtube.com/watch?v=NzPNkGDHsjE&ab_channel=greenelibrary)
 
 
 ## Preparation
