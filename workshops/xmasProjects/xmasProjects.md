@@ -4,12 +4,21 @@
 ## Basic Rules
 * Have fun!
 * Be creative!
-* Show your background
-  * cultur
+* Bring in your personality
+  * culture
   * hobbies
-  * scientific 
+  * research
+  * memes
 * Goal: Everyone builds something for Christmas Tree or Show Case.
 * **Don't hesitate to ask someone from Lichtwerkstatt for help!**
+
+## Materials
+* black, white and red cardboard
+* colored origami paper (20x20cm), shiny origami paper (10x10cm)
+* tracing paper
+* 4mm ply wood
+* paper glue, glue and glue gun
+* scissors, thread
 
 ## Vectorgraphics
 * use a Vectorgraphic Program of your Choice
