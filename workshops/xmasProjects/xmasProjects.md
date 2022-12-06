@@ -1,3 +1,4 @@
+![](nanoXmas.png)
 # XMas MAKER Projects
 
 ## Basic Rules
@@ -8,6 +9,7 @@
   * hobbies
   * scientific 
 * Goal: Everyone builds something for Christmas Tree or Show Case.
+* **Don't hesitate to ask someone from Lichtwerkstatt for help!**
 
 ## Vectorgraphics
 * use a Vectorgraphic Program of your Choice
@@ -15,15 +17,25 @@
   * [Inkscape](https://inkscape.org/) (Open Source)
   * [Affinity Designer](https://affinity.serif.com/) (nice and cheap for Desktop and iPad)
 
+## Beginner Tips&Tricks
+* use primitive shapes and combine them with boolean operations
+* use grid and automatic snap when designing interlocking parts
+* use bitmaps(photos) to trace vector paths on top
+* search for suitable graphics on the internet and trace them
+* high-res black/white images are tracable automatically in Illustrator
+
 ## Lasercutter
+* design your model in small parts and export in individual SVGs to facilitate using left-over material
 * imports an SVG File
   * path contour or fill colors dont matter
   * path thickness doesnt matter
+* dont forget to convert objects (especially text) into paths
 * Lasercutter will cut EVERY path, so look out for
   * paths with no contour color
   * paths with no visible color (white)
   * paths with zero thickness
 * wood has thickness of 4mm, plan intersecting pieces accordingly.
+* cut your model in cardboard first if you're unsure 
 
 # Projects
 
