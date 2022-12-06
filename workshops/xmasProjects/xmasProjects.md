@@ -28,7 +28,7 @@
 # Projects
 
 ## XMas Tree Ornament
-* [Template and Bloch Sphere Example](/christmasTree_hanger)
+* [Template and Bloch Sphere Example](christmasTree_hanger)
 
 
 Further links:
