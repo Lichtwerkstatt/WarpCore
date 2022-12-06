@@ -18,7 +18,7 @@
 * tracing paper
 * 4mm ply wood
 * LED tea light candle (⌀38mm), CR2032 battery
-* paper glue, glue and glue gun
+* paper glue, wood glue and glue gun
 * scissors, thread
 
 ## Vectorgraphics
