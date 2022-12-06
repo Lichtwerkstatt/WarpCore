@@ -30,7 +30,6 @@
 ## XMas Tree Ornament
 * [Template and Bloch Sphere Example](christmasTree_hanger)
 
-
 Further links:
 * Extensive Tutorial on [YouTube](https://www.youtube.com/watch?v=s6hlxlxbvPg&ab_channel=TheLaneLibraries)
 * Example on [YouTube](https://www.youtube.com/watch?v=MlPlE84HQno&ab_channel=TheLaneLibraries)
@@ -41,6 +40,9 @@ Further links:
 * Cut in Black Paper and glue on tracing paper
 
 ## Tea Light Holder
+* [Single Sided](tealight_1sided)
+* [Quatro Sided](tealight_4sided)
+* [Schwibbsbogen](tealight_bogen)
 
 ## misc Projects
 * Popup Card [YouTube](https://www.youtube.com/watch?v=3PHIyNMzrtk&ab_channel=FabLabOulu) (Inkscape, Lasercutter)
