@@ -17,6 +17,7 @@
 * colored origami paper (20x20cm), shiny origami paper (10x10cm)
 * tracing paper
 * 4mm ply wood
+* LED tea light candle (⌀38mm), CR2032 battery
 * paper glue, glue and glue gun
 * scissors, thread
 
