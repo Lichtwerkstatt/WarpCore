@@ -83,5 +83,5 @@ Further links:
 * 3D Paper Star [YouTube](https://www.youtube.com/watch?v=vT_aYYDsvtc)
 * Easy Snowflake [YouTube](https://www.youtube.com/watch?v=7J2FcmWnMA4)
 * Origami Ornaments [YouTube](https://www.youtube.com/watch?v=KtUxDOROZ0Q) [YouTube](https://www.youtube.com/watch?v=pGtUOPiDSXg)
-* Origami SnowFlake [YouTube]https://www.youtube.com/watch?v=MbhlVfLtcaM
+* Origami SnowFlake [YouTube](https://www.youtube.com/watch?v=MbhlVfLtcaM)
 * Origami Christmas Tree [YouTube](https://www.youtube.com/watch?v=OYXg0xq9A5M)
