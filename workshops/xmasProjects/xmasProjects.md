@@ -78,3 +78,10 @@ Further links:
 * PopupCard [Instructables](https://www.instructables.com/Popup-Cards-With-Laser-Cutter/)
 
 ## Projects without Lasercutting
+* Origami Star [YouTube](https://www.youtube.com/watch?v=rOkAA6Fk0fc)
+* Origami Tree [YouTube](https://www.youtube.com/watch?v=n8ICbk6Z8m0)
+* 3D Paper Star [YouTube](https://www.youtube.com/watch?v=vT_aYYDsvtc)
+* Easy Snowflake [YouTube](https://www.youtube.com/watch?v=7J2FcmWnMA4)
+* Origami Ornaments [YouTube](https://www.youtube.com/watch?v=KtUxDOROZ0Q) [YouTube](https://www.youtube.com/watch?v=pGtUOPiDSXg)
+* Origami SnowFlake [YouTube]https://www.youtube.com/watch?v=MbhlVfLtcaM
+* Origami Christmas Tree [YouTube](https://www.youtube.com/watch?v=OYXg0xq9A5M)
