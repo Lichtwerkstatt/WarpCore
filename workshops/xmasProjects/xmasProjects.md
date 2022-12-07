@@ -24,7 +24,12 @@
 ## Vectorgraphics
 * use a Vectorgraphic Program of your Choice
   * [Adobe Illustrator](https://www.adobe.com/de/products/illustrator.html) (contained in Adobe Cloud licence for FSU staff and students)
+    * Illustrator for Scientists [PDF](https://www2.mrc-lmb.cam.ac.uk/groups/cartera/download/Illustrator-for-Scientists-A-Brief-Overview.pdf)
+    * Illustrator Christmas Ornaments [YouTube](https://www.youtube.com/watch?v=2LMgF2GvWBE&ab_channel=SonduckFilm)
   * [Inkscape](https://inkscape.org/) (Open Source)
+    * Inkscape Tutorial [Website](https://inkscape.org/learn/tutorials/)
+    * Inkscape Basic Christmas Ornament [YouTube](https://www.youtube.com/watch?v=EAO-NTjMevw)
+    * Inkscape Advanced Ornament [YouTube](https://www.youtube.com/watch?v=vl2D7ka4_8Q)
   * [Affinity Designer](https://affinity.serif.com/) (nice and cheap for Desktop and iPad)
 
 ## Beginner Tips&Tricks
