@@ -71,12 +71,6 @@ Further links:
 * [Quatro Sided](tealight_4sided) ![](tealight_4sided/mockup.jpg)
 * [Schwibbsbogen](tealight_bogen)
 
-## Moar Template Files!
-* [3D Christmas Card] (misc/3dChristmasCard) ![](misc/3dChristmasCard/3d%20christmas%20card.jpg) 
-* [3D Christmas Tree Decoration](misc/3dChristmasTreeDeko/) ![](misc/3dChristmasTreeDeko/3d%20christmas%20toy.jpg)
-* [Christmas Flags](misc/ChristmasFlags/) ![](misc/ChristmasFlags/Flags%20for%20Christmas%20garland.jpg)
-* [Christmas Tree Bulbs](misc/ChristmasTreeBulbs/) ![](misc/ChristmasTreeBulbs/Flags%20light%20bulbs.jpg)
-
 ## misc Projects
 * Popup Card [YouTube](https://www.youtube.com/watch?v=3PHIyNMzrtk&ab_channel=FabLabOulu) (Inkscape, Lasercutter)
 * Popup Card [Trotec Website](https://www.troteclaser.com/de/hilfe-support/hilfe-center/pop-up-karte-papier-erstellen) (Adobe Illustrator, Lasercutter) :de:
