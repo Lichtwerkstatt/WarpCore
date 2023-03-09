@@ -1,6 +1,6 @@
-# Video Editing with Adobe Premiere
+# Introduction into Lasercutting
 
-**Date** : March, 8th 2023  
+**Date** : March, 9th 2023  
 **Time** : 5pm - 8pm  
 **Place** : ACP SR2
 
