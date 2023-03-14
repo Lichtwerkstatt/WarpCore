@@ -27,14 +27,15 @@
 ## First Glimpse
 - New Project
   - Training
+- UI Panels
+  - Menu
+  - Views
 - Import Files
   - File Formats
   - Metadata
   - Color Codes, Preview, Folders
   - Maximize Ü, FreeView
-- UI Panels
-  - Menu
-  - Views
+
 
 ## First Sequence
 - Sequences
