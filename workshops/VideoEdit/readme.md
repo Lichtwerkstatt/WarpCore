@@ -29,7 +29,7 @@
   - Training
 - UI Panels
   - Menu
-  - Views
+  - Views (All Windows)
 - Import Files
   - File Formats
   - Metadata
@@ -40,13 +40,14 @@
 ## First Sequence
 - Sequences
   - New (Properties) / From Clip
-  - Timeline
+  - Timeline / Snap (Shift)
+  - TimeCode
 - Video Clips
-  - Drag n Drop / Multiple
-  - In Out
+  - Drag n Drop into Track
+  - In Out / Drag n Drop / Insert / Replace
   - Cut
   - Video / Sound
-  - Layers
+  - Tracks
   - Properties / Speed / Standbild / Audio
 - Navigate Timeline
   - Timecode
