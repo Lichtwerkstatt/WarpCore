@@ -68,6 +68,11 @@
 - Shoot for the Edit (Storyboards!)
 - Good Artists copy! (StarWars vs. DamBusters)
 
+## MultiCam Editing
+- Layer Clips
+- Synchronize
+- Cut on Music
+
 ## Effects
 - Transitions / VideoAudio
 - Effects : Blue Mosaik, Keying
@@ -90,10 +95,18 @@
 
 
 ## Material
-- Sebastian
-- QComp Werbung (GreenScreen)
+- B-Roll from Archive.org
+- Dance Frontal : QBitzi dancing as Image Sequence
+- Green Screen : Green Screen Recording of Falk
+- HBTI_Anims : Blender Animations of HBTI Experiment
+- Images
+- LabMorning : Footage of Going to the Lab
+- multiCam_Bumsi : Multicam Recording of talking about HBTI
+- Music_Sounds
 
 ## Resources
 - [YouTube: Adobe Premiere Grundkurs](https://www.youtube.com/watch?v=IIuWPH2QcI8) 🇩🇪
+- [YouTube: Premiere in 10 Minutes](https://www.youtube.com/watch?v=cxzXEakrYO4&ab_channel=VinceOpra)
+- [YouTube: Premiere Masterclass](https://www.youtube.com/watch?v=8eDsvKwM40U&ab_channel=AdobeVideo%26Motion)
 
 
