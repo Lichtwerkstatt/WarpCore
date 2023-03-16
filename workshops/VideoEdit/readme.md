@@ -69,29 +69,25 @@
 - Good Artists copy! (StarWars vs. DamBusters)
 
 ## Effects
-- Blending / VideoAudio
+- Transitions / VideoAudio
+- Effects : Blue Mosaik, Keying
+  - Einstellebene
 - Clip Effect Properties (Transform, Scale etc)
-- Maske
+- Masks
 - Animation
-- Examples
-  - Add Effects (fx on/off)
-  - Keying
-  - Blur/Mosaik with Mask
 
-### Color Grading
-- Einstellebene
-- White Abgleich
-- Lumetri Farbe
-- Vignette
-
-## Essential Graphics
-- Text
-- Formen
-- Anfang/Ende
-
-## Essential Sound
+### Sound and Graphics Essentials
+- Sound
+- Color Grading
+- Graphics
+  - Text / Form
+  - Animation
+  - In/Out
 
 ## Render & Export
+- File Type
+- Compression
+
 
 ## Material
 - Sebastian
