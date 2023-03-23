@@ -62,14 +62,58 @@
     - Animate Size
     - Mask with Form Matte
       - Mask with Mask on Color Layer
+      - Include/Exclude
+      - Feather
     - Motion Blur
+  - **Exercise**:
+    - jumping Ball
+    - Shadow
     
   - Expressions
     - loopOut
     - wiggle
     - Slider Control
 
+## SubComp
+  - Generate
+  - Synchronize
 
+## TextTool
+  - Text Layers
+  - Effects
+
+## Effects
+- Color Correction
+- Distort
+- Particles
+- Blur
+- Gradients
+- Adjustment Layer
+
+## 3D Layers
+- Position / Rotation
+
+- **Exercise**:
+  - Polarizer.MP4
+  - Textanimation
+  - add sin Curve
+  - layer fill (Mask Füllen) -> green/red
+  - 3d layer -> rotation according to footage
+  - animation according to hand movement
+  - light particles
+  - shining
+
+## Tracking
+### One Point
+### Two Point
+### Camera Tracking
+
+**Exercise**:
+- Grumpy Ralf
+
+## Puppet Animation
+
+## Export
 
 
 ## Material
@@ -78,3 +122,7 @@
 - Quantum Lecture
 - Image Sequence Dance Frontal
 - atom pngs
+- Komp with Atom
+- Polarizer.mp4
+- sin curve
+- setup.mp4
