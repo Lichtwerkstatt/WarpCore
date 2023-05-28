@@ -1,0 +1,28 @@
+.model AO4614B_N VDMOS(Kp=19.4363 Rs=0.006 Rd=0.0105 Rg=4.6 Vto=2.68 mtriode=1.2 Ksubthres=.0001 Lambda=0.14 Cgdmax=349p Cgdmin=17p Cgs=473p tt=26n A=0.24 Is=7.78E-15 N=0.896 Rb=0.007406 m=0.963 Vj=4.79 Cjo=190.0pF mfg=AOS Vds=40 Ron=24m Qg=4.3n)
+
+.model AO4614B_P VDMOS(pchan Kp=13.4564 Rs=0.0004 Rd=0.0259 Rg=14.0 Vto=-2.55 mtriode=.85 Ksubthres=.1 Lambda=0.11 Cgdmax=572p Cgdmin=28p Cgs=868p tt=30n A=0.23 Is=1.26E-10 N=1.276 Rb=0.00823 m=1.322 Vj=6.13 Cjo=170.0pF mfg=AOS Vds=-40 Ron=36m Qg=7.9n)
+
+.model AON6667_N VDMOS(Kp=17.3126 Rs=0.0002 Rd=0.0107 Rg=1.8 Vto=2.41 mtriode=1.1 Ksubthres=.1 Lambda=0.07 Cgdmax=262p Cgdmin=25p Cgs=332p tt=09n A=0.38 Is=2.15E-12 N=1.077 Rb=0.001763 m=0.282 Vj=0.1 Cjo=110.0pF mfg=AOS Vds=30 Ron=18.5m Qg=3.5n)
+
+.model AON6667_P VDMOS(pchan Kp=26.564 RS=0.0002 Rd=0.0112 Rg=4.0 Vto=-2.68 mtriode=.5 Ksubthres=.1 Lambda=0.11 Cgdmax=607p Cgdmin=74p Cgs=915p tt=17n A=0.27 Is=6.95E-11 N=1.236 Rb=0.002939 M=1.459 Vj=6.83 Cjo=300.0pF mfg=AOS Vds=-30 Ron=16.5m Qg=9.6n)
+
+.model P_50n VDMOS(TOX=200E-10 NSUB=1E17 GAMMA=0.6 PHI=0.7           VTO=-0.9 DELTA=0.1 UO=250 ETA=0 THETA=0.1 KP=40E-6 VMAX=5E4             KAPPA=1 RSH=0 NFS=1E12 TPG=-1 XJ=500E-9 LD=100E-9              CGDO=200E-12 CGSO=200E-12 CGBO=1E-10 CJ=400E-6 PB= 1            MJ=0.5 CJSW=300E-12 MJSW=0.5)  
+
+.model N_50n VDMOS(TOX=200E-10 NSUB=1E17 GAMMA=0.5 PHI=0.7           VTO=-0.9 DELTA=3 UO=650 ETA=3.0E-6 THETA=0.1 KP=12E-6 VMAX=1E5             KAPPA=0.3 RSH=0 NFS=1E12 TPG=-1 XJ=500E-9 LD=100E-9              CGDO=200E-12 CGSO=200E-12 CGBO=1E-10 CJ=400E-6 PB= 1            MJ=0.5 CJSW=300E-12 MJSW=0.5)  
+
+.model QTLP690C D(Is=1e-22 Rs=6 N=1.5 Cjo=50p Xti=100)
+
+.model 2N3904 NPN(IS=1E-14 VAF=100
++  Bf=300 IKF=0.4 XTB=1.5 BR=4
++  CJC=4E-12  CJE=8E-12 RB=20 RC=0.1 RE=0.1
++  TR=250E-9  TF=350E-12 ITF=1 VTF=2 XTF=3 mfg=NXP)
+
+.model 2N3906 PNP(IS=1E-14 VAF=100
++  BF=200 IKF=0.4 XTB=1.5 BR=4
++  CJC=4.5E-12 CJE=10E-12 RB=20 RC=0.1 RE=0.1
++  TR=250E-9   TF=350E-12 ITF=1 VTF=2 XTF=3 mfg=NXP)
+
+.model 1N4001 D(IS=6.698e-07 RS=0.04255 CJO=1.949e-11 TT=4.933e-06
++   IBV =  0.005177)
+
+.model 1N4148 D(Is=0.1p Rs=1.6 CJO=2p Tt=12n Bv=100 Ibv=0.1p)

@@ -80,10 +80,34 @@
 - Flags (GND, PWR)
 - Wires (W)
 
+### Build Blinking Light (LED Flasher)
+- [Flashing LED](https://www.elprocus.com/wp-content/uploads/Blinking-LED-using-555-timer.jpg) based on 555 Timer
+- Add Component NE555D
+- Add three resistors, polarized condensators and a LED
+- Add Voltage Source
+- add VCC and GND flags
+- wire everything up
+
 ### Step Add Component Symbol
 
 
 ### Special Step Simulations in KiCAD with Spice
+**555 Timer Simulation**
+![555 Flasher Schematic](files/555flasher_schematic.JPG)
+- add Spice Model to 555 Timer
+- add Spice Model to Diode (QLP...)
+- have values for every component
+- have an id for every component
+- add output flag
+- .tran 1u 20m 2m uic directive
+
+**Capacitor Load Cycle**
+- add voltage supply (spice / VDC)
+- add resistor and capacitor
+- add reference point (0)
+- VDC 15V, 100kOhm, 10uF
+- .tran 0.1 10 uic directive
+
 
 **Exercise** : Draw a schematic for a Laser Diode Driver (Constant Current Source) in KiCAD.
 
