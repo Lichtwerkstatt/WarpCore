@@ -56,6 +56,7 @@
     - Board Layout
     - Production
     - Generate BOM
+  - it's an iterativ cyclic process! (Jumping back and forth)
   - KiCAD is not (particularly) for
     - Circuit Simulation
     - Heat and E/M field distribution
@@ -189,4 +190,9 @@
 - Generate Drill Files
 - ZIP all gbr and drl files
 - Done!
+
+### Export 3D Model
+- Open PCB Designer
+- File > Export > STEP File
+- Open STEP in FreeCAD
  
