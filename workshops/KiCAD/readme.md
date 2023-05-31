@@ -88,8 +88,23 @@
 - add VCC and GND flags
 - wire everything up
 
-### Step Add Component Symbol
+### Import DigiKey Symbol Library
+- open Schematic or Symbol Editor
+- Preferences / Manage Symbol Libraries
+- Global/Local
+- Download Libraries from DigiKey [GitHub](https://github.com/Digi-Key/digikey-kicad-library)
+- Add Library -> All files from Symbols
 
+
+### Step Add Component Symbol
+- open Symbol Editor
+- File > New/Add Library (local/global)
+- Add Box (with Text)
+- Add Pins
+  - In/Out
+  - Direction
+  - Label
+- Insert new Symbol into Schematic
 
 ### Special Step Simulations in KiCAD with Spice
 **555 Timer Simulation**
@@ -112,11 +127,66 @@
 **Exercise** : Draw a schematic for a Laser Diode Driver (Constant Current Source) in KiCAD.
 
 ## Step 2 Assign Footprints
+- **Option 1**
+  - Run Footprint Assign
+  - 555: Package-DIP, DIP-8W7.62
+  - R: Resistor_THT, Axial
+  - CP : Capacitor_THT, CP_Radial
+- **Option 2**
+  - Symbol Properties
+  - Footprint
+  - Library - Footprint
 
 ### Step Design your own Footprint
+- open Footprint Editor
+- File -> New/Add Libary
+- New Footprint
+- Add Pads
+- Label Silkscreen
+- Courtyard
+
+### Install Footprint Library
+- Open Footprint Editor
+- Preferences -> Manage Footprint
+- Global / Local
+- Choose Folder from Downloaded from DigiKey [GitHub](https://github.com/Digi-Key/digikey-kicad-library)
+
+**Exercise** : Assign all the footprints for your Laser Driver Circuit.
 
 ## Step 3 PCB Design
+- open PCB Designer
+- Tools, Views, Layers
+- Tools > Update PCB from Schematic
+- move parts (M, R)
+- Outline: Edge.Cuts
+- Track (X)
+- Track Layers (Set Via V)
+- Add Text (Front and Back)
+
+### Images on your PCB!
+- Open Image Converter
+- measure size on PCB
+- import image, change size
+- Output Footprint
+- Front Silk
+- Export to File:
+  - generate Pretty Folder
+  - save file in Folder
+- Open PCB Designer
+- Preferences -> Manage Libraries
+- add Footprint
+- Decide Front/Back in Properties
+
+### Advanced Art:
+- import edge cut as graphic
+
+- YouTube [Tutorial](https://www.youtube.com/watch?v=zjnwlTgil4A&ab_channel=StuartPatterson)
 
 ## Step 4 Generate Gerber Files and BOM
 
+- Open PCB Designer
+- File > Fabrication Output > Gerbers
+- Generate Drill Files
+- ZIP all gbr and drl files
+- Done!
  
