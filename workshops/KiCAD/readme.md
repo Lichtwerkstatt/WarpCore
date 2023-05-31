@@ -195,4 +195,25 @@
 - Open PCB Designer
 - File > Export > STEP File
 - Open STEP in FreeCAD
- 
+
+## Appendum
+- List of KiCAD Extensions from [this](https://www.youtube.com/watch?v=eMdX3R9ni7g) YouTube Video
+- **KiBuzzard**
+  - nice Labels
+  - [GitHub](https://github.com/gregdavill/KiBuzzard)
+- **InteractiveHtmlBOM**
+  - Exporter for a nice interactive HTML BOM  
+  - [GitHub](https://github.com/openscopeproject/InteractiveHtmlBom)
+- **KiKit**
+  - automatic Panel Generator
+  - Presets for common Manufacturers
+  - [GitHub](https://github.com/yaqwsx/KiKit)
+- **Footprint Generator**
+  - Automatic Footprint Generation based on YAML File
+  - [GitHub](https://github.com/pointhi/kicad-footprint-generator) 
+- **KiCadStepUp**
+  - read KiCad Files / Footprints into FreeCAD
+  - push sketches to PCB edge cuts
+  - [GitHub](https://github.com/easyw/kicadStepUpMod/)
+- **PCB Checklist**
+  - [GitHub](https://github.com/azonenberg/pcb-checklist/blob/master/layout-checklist.md) Checklist for PCB Design
