@@ -78,6 +78,8 @@
 - Scroll / Press Scroll for Zooming and Paning
 - Add Component (A)
 - Rotate (R), Move (M), Pull (G)
+- Copy (C)
+- Abort (Esc)
 - Flags (GND, PWR)
 - Wires (W)
 
@@ -157,11 +159,17 @@
 ## Step 3 PCB Design
 - open PCB Designer
 - Tools, Views, Layers
+- Page Setup
+- Board Setup (Design Rules)
+  - Tracks: 0.5, 0.3mm
+  - Clearance etc. see Manufacturer     
 - Tools > Update PCB from Schematic
 - move parts (M, R)
+- Mounting Holes Footprint
 - Outline: Edge.Cuts
 - Track (X)
 - Track Layers (Set Via V)
+- Backside: GND Layer
 - Add Text (Front and Back)
 
 ### Images on your PCB!
