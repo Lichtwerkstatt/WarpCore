@@ -162,6 +162,12 @@
 - Outline: Edge.Cuts
 - Track (X)
 - Track Layers (Set Via V)
+- Copper Pour
+  - Optimize Milling Process
+  - Reduce radio emission surrounded
+  - Optimize Layout
+  - Add Zone (GND, B.Cu)
+  - RightClick -> Zones -> Fill all Zones
 - Add Text (Front and Back)
 
 ### Images on your PCB!
