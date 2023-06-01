@@ -78,6 +78,8 @@
 - Scroll / Press Scroll for Zooming and Paning
 - Add Component (A)
 - Rotate (R), Move (M), Pull (G)
+- Copy (C)
+- Abort (Esc)
 - Flags (GND, PWR)
 - Wires (W)
 
@@ -157,8 +159,13 @@
 ## Step 3 PCB Design
 - open PCB Designer
 - Tools, Views, Layers
+- Page Setup
+- Board Setup (Design Rules)
+  - Tracks: 0.5, 0.3mm
+  - Clearance etc. see Manufacturer     
 - Tools > Update PCB from Schematic
 - move parts (M, R)
+- Mounting Holes Footprint
 - Outline: Edge.Cuts
 - Track (X)
 - Track Layers (Set Via V)
@@ -201,4 +208,25 @@
 - Open PCB Designer
 - File > Export > STEP File
 - Open STEP in FreeCAD
- 
+
+## Appendum
+- List of KiCAD Extensions from [this](https://www.youtube.com/watch?v=eMdX3R9ni7g) YouTube Video
+- **KiBuzzard**
+  - nice Labels
+  - [GitHub](https://github.com/gregdavill/KiBuzzard)
+- **InteractiveHtmlBOM**
+  - Exporter for a nice interactive HTML BOM  
+  - [GitHub](https://github.com/openscopeproject/InteractiveHtmlBom)
+- **KiKit**
+  - automatic Panel Generator
+  - Presets for common Manufacturers
+  - [GitHub](https://github.com/yaqwsx/KiKit)
+- **Footprint Generator**
+  - Automatic Footprint Generation based on YAML File
+  - [GitHub](https://github.com/pointhi/kicad-footprint-generator) 
+- **KiCadStepUp**
+  - read KiCad Files / Footprints into FreeCAD
+  - push sketches to PCB edge cuts
+  - [GitHub](https://github.com/easyw/kicadStepUpMod/)
+- **PCB Checklist**
+  - [GitHub](https://github.com/azonenberg/pcb-checklist/blob/master/layout-checklist.md) Checklist for PCB Design
