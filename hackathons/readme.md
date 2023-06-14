@@ -8,6 +8,9 @@ Jena City Hackathon
 
 ## Basic Information
 - Hackathon [Website](https://smartcity.jena.de/smart-city-projekt/hack-paradise)
+- [Discord](https://discord.gg/kpjGXzdYek) Server
+  - Channel **#hacktheparadise23**
+  - Voice Channel **#hackingBooth**
 
 ## Schedule
 - 09:30 Registration and Snacks (Foyer)
