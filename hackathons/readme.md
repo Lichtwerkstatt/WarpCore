@@ -20,7 +20,23 @@ Jena City Hackathon
 - 11:00 Start (SR1 & SR2)
 - 13:00 Pizza Break (Foyer)
 - 19:00 Pitches (Auditorium)
-- 20:00 Get-Together and Open-End 
+- 20:00 Get-Together and Open-End
+
+## First time at an Hackathon? What to do...
+- Pick a topic to work on. Choose by
+  - Experience : You know something or worked on that or a similar topic?
+  - Interest : You're interested in the problem and like to dive in?
+  - Participate : Diversity rulez! Especially outsiders can have an impact by bringing in unconventional ideas and aspects.
+- You want to know more about a specific topic?
+  - Pick a technology and walk yourself through one of the tutorials.
+  - Think of a very simple problem you can solve in the given time.
+  - Ask for help if you're stuck.
+- Get Creative!
+  - The best ideas come with not so obvious problems.
+  - Think of your daily live. What bothers you? What would help?
+  - Talk to people about your ideas and discuss solutions.
+- Always hydrate!
+    
 
 ## Challenges
 
