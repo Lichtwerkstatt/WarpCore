@@ -62,7 +62,7 @@ With the help of sensors that measure the moisture content in the soil, data on 
 
 Pick one of the tutorials fitting your interest and expertise. Most of the technology used here is available in the Lichtwerkstatt. Ask or message Johannes, Canan or David for more information or help. 
 
-### **BASIC** TinkerCAD
+### **BEGINNER** TinkerCAD
 TinkerCAD is a free web-based application to design 3d models or electronic circuits. You can easily learn to build your own 3d printable objects or basic microcontrolled circuits in an afternoon without any pre-knowledge. TinkerCAD runs on a pc, laptop or tablet and all you need is an account.
 
 - TinkerCAD [Website](https://www.tinkercad.com/)
@@ -73,5 +73,14 @@ TinkerCAD is a free web-based application to design 3d models or electronic circ
 
 ### **BASIC** Arduino
 Arduino is a easy programmable Microcontroller. The language used is very basic and helps you programming on the go. All you need to do is take an Arduino, install the Arduino IDE on your computer and then get some LEDs blinking.
+
+- Arduino [Development Environment](https://docs.arduino.cc/software/ide-v2) (IDE)
+- Arduino [Docs](https://docs.arduino.cc/hardware/uno-rev3)
+- Arduino [Getting started](https://docs.arduino.cc/software/ide-v1/tutorials/getting-started/cores/arduino-avr)
+- [MasterClass](https://www.youtube.com/watch?v=BLrHTHUjPuw&ab_channel=ProgrammingElectronicsAcademy) on YouTube
+- FreeCodeCamp [Tutorial](https://www.youtube.com/watch?v=zJ-LqeX_fLU&ab_channel=freeCodeCamp.org) on YouTube
+- Tutorial [Series](https://www.youtube.com/watch?v=fJWR7dBuc18&ab_channel=PaulMcWhorter) on YouTube
+- Funduino [Anleitungen](https://funduino.de/) auf deutsch
+- **Tip:** Just search for Arduino and Name of Part to find Sample Code, Circuits and Projects
 
 ### **ADVANCED** ESP-32
