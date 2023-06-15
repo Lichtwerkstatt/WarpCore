@@ -57,3 +57,21 @@ Under current and future climatic conditions, vegetation is increasingly sufferi
 With the help of sensors that measure the moisture content in the soil, data on the actual water supply of the vegetation can be obtained and targeted irrigation can be planned. Currently, sensors are being used for test purposes at sites for planting new urban trees and for a monitoring project in the urban forest. A city-wide sensor network is currently being set up. This data is to be evaluated and visualised as part of the Challenge. The aim is to use the data to develop an urban watering route optimisation in order to be able to optimally supply the urban greenery in future dry periods.
 
 ### and everything else people may come up with (will be updated...)
+
+## Tutorials ##
+
+Pick one of the tutorials fitting your interest and expertise. Most of the technology used here is available in the Lichtwerkstatt. Ask or message Johannes, Canan or David for more information or help. 
+
+### **BASIC** TinkerCAD
+TinkerCAD is a free web-based application to design 3d models or electronic circuits. You can easily learn to build your own 3d printable objects or basic microcontrolled circuits in an afternoon without any pre-knowledge. TinkerCAD runs on a pc, laptop or tablet and all you need is an account.
+
+- TinkerCAD [Website](https://www.tinkercad.com/)
+- TinkerCAD [Learning Platform](https://www.tinkercad.com/learn)
+- TinkerCAD [Tutorial](https://www.youtube.com/watch?v=gOs6Mdj7y_4) on YouTube
+- TinkerCAD [Tutorial](https://all3dp.com/2/tinkercad-tutorial-easy-beginners/) article on approach
+- TinkerCAD Circuits [Tutorial](https://www.youtube.com/watch?v=yyG0koj9nNY&list=PLV6cmKvnKRs5geApVORPW79U6s3wpa0Ht) Series on YouTube
+
+### **BASIC** Arduino
+Arduino is a easy programmable Microcontroller. The language used is very basic and helps you programming on the go. All you need to do is take an Arduino, install the Arduino IDE on your computer and then get some LEDs blinking.
+
+### **ADVANCED** ESP-32
