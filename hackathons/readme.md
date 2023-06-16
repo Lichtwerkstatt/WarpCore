@@ -2,6 +2,7 @@
 Jena City Hackathon  
 **June, 17th 2023**  
 10:00 am - 10:00 pm  
+[Lichtwerkstatt Jena](http://www.lichtwerkstatt-jena.de)  
 [Abbe Center of Photonics](https://www.acp.uni-jena.de/)  
 [Albert-Einstein-Str. 6](https://www.openstreetmap.org/#map=19/50.90879/11.56897)  
 07745 Jena
@@ -83,4 +84,12 @@ Arduino is a easy programmable Microcontroller. The language used is very basic 
 - Funduino [Anleitungen](https://funduino.de/) auf deutsch
 - **Tip:** Just search for Arduino and Name of Part to find Sample Code, Circuits and Projects
 
-### **ADVANCED** ESP-32
+### **ADVANCED** ESP-32  
+The ESP-32 is a modern microcontroller which works just like the Arduino platform but with more funtionalities, especially WiFi and Bluetooth Support. Learn to build embedded hardware solutions directly connected to the internet.
+
+- ESP-32 [Getting started](https://randomnerdtutorials.com/getting-started-with-esp32/) Guide
+- ESP-32 [List](https://esp32io.com/esp32-tutorials) of Tutorials
+- ESP-32 [Access Point](https://randomnerdtutorials.com/esp32-access-point-ap-web-server/)
+- ESP-32 [Web Server](https://randomnerdtutorials.com/esp32-web-server-arduino-ide/)
+- ESP-32 Getting started with [Blynk](https://examples.blynk.cc/?board=ESP32&shield=ESP32%20WiFi&example=GettingStarted%2FBlynkBlink)
+- ESP-32 [LED](https://www.instructables.com/Use-ESP32-to-Control-LED-With-Blynk-Via-WiFi/) with Blynk
