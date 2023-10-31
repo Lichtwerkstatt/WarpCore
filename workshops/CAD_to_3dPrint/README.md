@@ -28,3 +28,14 @@
 - Licences : FSU Autodesk Inventor, SolidWorks, PTC?
 - Educational: [FUSION 360](https://www.autodesk.com/products/fusion-360/personal) (Maker), [OnShape](https://www.onshape.com/de/) (browserbased)
 - Free to Use: FreeCAD, [TinkerCAD](https://www.tinkercad.com/), [OpenSCAD](https://openscad.org/)
+
+### FreeCAD
+- basic CAD program
+- nice community, open development
+- tutorials, easy to learn
+- AddOns (Benches) , perfect for maker and hobby designer
+
+#### PART Bench
+- Add Primitive, Properties, Transform
+- Boolean, Mirror
+- Change afterwards (Non Destructive)
