@@ -39,3 +39,44 @@
 - Add Primitive, Properties, Transform
 - Boolean, Mirror
 - Change afterwards (Non Destructive)
+
+#### PART DESIGN
+
+
+ - Parametric Design
+
+#### EXPORT
+ - STL, Resolution
+ - View in Editor
+ - View in Blender
+
+## 3D Printing
+ - CAM method, compare to Lasercutting / CNC Milling
+ - Methods [Overview](https://all3dp.com/2/3d-modeling-for-3d-printing-the-main-considerations/)
+     - SLA (+ resins, layerheight) (-postprocessing, waste)
+     - Sintering (+ metal, no support) (- expensive, powder everywhere)
+     - FDM (+ cheap, easy to handle) (- materials)
+ - Printers then and now
+ - Filaments (PLA, PETG (ABS), TPU/PVA/... )
+
+### Slicing
+ - Setup and Import Model
+ - Layer Height, Infill
+ - Critical First Layer : Contact Surface, Adhesion Plate
+ - Know your Printer :
+    - Thermal Distortion, Holes, Dimensions
+    - Overhangs, Bridging
+    - Support Structures
+
+### Best Practices
+- [Design Rules](https://www.hydraresearch3d.com/design-rules)
+- [Poster by Billie Rubens](https://blog.adafruit.com/2020/01/24/a-poster-of-cad-design-tips-for-3dprinting-cad-billierubenmake/)
+- Overhangs 45° Rule -> Archs Tear Shaped
+- Round Corners
+- Chamfers on Bottom
+- Support Inner Corners
+- Orientation
+- Cascading Bridges
+- Complient Mechanisms
+- Seperate Parts, Minimize Failure, FDM scales badly
+ 
