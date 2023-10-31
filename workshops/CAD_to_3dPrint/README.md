@@ -79,4 +79,5 @@
 - Cascading Bridges
 - Complient Mechanisms
 - Seperate Parts, Minimize Failure, FDM scales badly
+- Example: OpenBikeSensor MainCase.stl
  
