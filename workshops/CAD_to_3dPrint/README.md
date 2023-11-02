@@ -36,14 +36,21 @@
 - AddOns (Benches) , perfect for maker and hobby designer
 
 #### PART Bench
-- Add Primitive, Properties, Transform
-- Boolean, Mirror
+- Start Page -> Benches
+- PART Bench, Model / Properties
+- Add Primitive, Properties, Transform, [Navigation](https://wiki.freecad.org/Mouse_navigation)
+- Add Second Primitve for Bracket
+- Boolean
 - Change afterwards (Non Destructive)
+- OPT: add Cylinder for Hole
+  - Draft Array for both Bracket Sides
 
 #### PART DESIGN
-
-
- - Parametric Design
+- Add Sketch for Box, Pad Sketch
+- Skin
+- Add Holes for PCB/Lid, Pad Holes
+- Name, Constraints: Constraints.ScrewDiameter
+- Spreadsheet, add Alias, access Alias Spreadsheet.ScrewDiameter
 
 #### EXPORT
  - STL, Resolution
