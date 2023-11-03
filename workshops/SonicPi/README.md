@@ -29,6 +29,7 @@
 - x.times do
 - Loops without Sleep, consecutive Loops
 - Threads
+- live_loop
 - **EXERCISE:** write basic drum rythm
 
 ## MOAR PARAMETERS
@@ -40,3 +41,17 @@
 - random amp, pan etc...
 - rrand_i
 - use_random_seed
+
+## STRUCTURES
+- Tick
+- Choose
+- Scales
+- Chords
+
+## EFFECTS
+- with_fx :echo do
+- see FX help
+
+## ENVELOPES
+
+
