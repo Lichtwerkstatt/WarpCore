@@ -1,6 +1,10 @@
 # KiCAD PCB Design
 
 ## Ressources
+- [DigiKey KiCAD Tutorial](https://www.youtube.com/watch?v=vaCVh2SAZY4&list=PL3bNyZYHcRSUhUXUt51W6nKvxx2ORvUQB)
+- [KiCAD in 7 Steps (USB Connector)](https://www.youtube.com/watch?v=3FGNw28xBr0&t=381s&pp=ygUOa2ljYWQgdHV0b3JpYWw%3D)
+- [PCB Art Tutorial](https://www.youtube.com/watch?v=vD6es-Y4LLc&t=403s&ab_channel=bytesizedengineering)
+
 
 ## Before start
 - first time workshop
@@ -68,11 +72,14 @@
   - Licence etc.
 - Scroll / Press Scroll for Zooming and Paning
 - Add Component (A)
+  - Type, Identifier Search
+  - Component Properties
 - Rotate (R), Move (M), Pull (G)
 - Copy (C)
 - Abort (Esc)
 - Flags (GND, PWR)
 - Wires (W)
+- Generate Reference Identifiers
 
 ### Build Blinking Light (LED Flasher)
 - [Flashing LED](https://www.elprocus.com/wp-content/uploads/Blinking-LED-using-555-timer.jpg) based on 555 Timer
@@ -103,22 +110,17 @@
 ### Special Step Simulations in KiCAD with Spice
 **555 Timer Simulation**
 ![555 Flasher Schematic](files/555flasher_schematic.JPG)
-- add Spice Model to 555 Timer
-- add Spice Model to Diode (QLP...)
+- add Splice Models:
+  - 555 Timer
+  - Diode AOS QTL690C
+- add Standard Models:
+  - BAT DC Voltage
+  - Resistors
+  - Capacitor
 - have values for every component
 - have an id for every component
 - add output flag
 - .tran 1u 20m 2m uic directive
-
-**Capacitor Load Cycle**
-- add voltage supply (spice / VDC)
-- add resistor and capacitor
-- add reference point (0)
-- VDC 15V, 100kOhm, 10uF
-- .tran 0.1 10 uic directive
-
-
-**Exercise** : Draw a schematic for a Laser Diode Driver (Constant Current Source) in KiCAD.
 
 ## Step 2 Assign Footprints
 - **Option 1**
