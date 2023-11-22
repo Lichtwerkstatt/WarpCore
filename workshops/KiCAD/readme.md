@@ -1,18 +1,8 @@
 # KiCAD PCB Design
 
-**Date**: June, 1st, 2023  
-**Time**: IMiP Lecture 12:00-16:00  
-**Place**: ACP SR1
-
 ## Ressources
 
 ## Before start
-- Arduino/ESP Workshop at [Hackathon](hacktheparadise.jena.de) June 17th.
-  - Join, Learn and Play Around!
-  - Build little Sensor Applications
-  - Programming microcontrollers
-  - sending Data (WiFi, LORA)
-  - Soldering, Akku welding
 - first time workshop
   - stay calm!
   - please give feedback
@@ -68,8 +58,9 @@
     - Help
 
 ## Step 1 Schematic Design
+- human readable schematic (and simulation)
 - Open EESchema
-- Configure Page Layout
+- Configure Page Layout (right click on MetaInfos)
   - Title
   - Rev
   - Date
