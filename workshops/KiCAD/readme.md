@@ -75,7 +75,7 @@
   - Type, Identifier Search
   - Component Properties
 - Rotate (R), Move (M), Pull (G)
-- Copy (C)
+- Copy (C), Duplicate (Ctrl-D)
 - Abort (Esc)
 - Flags (GND, PWR)
 - Wires (W)
@@ -88,6 +88,7 @@
 - Add Voltage Source
 - add VCC and GND flags
 - wire everything up
+- alternatively : use connector for power supply, add MountingHole
 
 ### Import DigiKey Symbol Library
 - open Schematic or Symbol Editor
@@ -125,13 +126,17 @@
 ## Step 2 Assign Footprints
 - **Option 1**
   - Run Footprint Assign
+      - better search (parts, numbers etc)
+      - for multiple parts with same footprint
+      - overview
   - 555: Package-DIP, DIP-8W7.62
   - R: Resistor_THT, Axial
   - CP : Capacitor_THT, CP_Radial
 - **Option 2**
-  - Symbol Properties
+  - Symbol Properties / or right click edit footprint
   - Footprint
   - Library - Footprint
+    - better for preview and 3d view
 
 ### Step Design your own Footprint
 - open Footprint Editor
@@ -147,8 +152,6 @@
 - Global / Local
 - Choose Folder from Downloaded from DigiKey [GitHub](https://github.com/Digi-Key/digikey-kicad-library)
 
-**Exercise** : Assign all the footprints for your Laser Driver Circuit.
-
 ## Step 3 PCB Design
 - open PCB Designer
 - Tools, Views, Layers
@@ -158,6 +161,7 @@
   - Clearance etc. see Manufacturer     
 - Tools > Update PCB from Schematic
 - move parts (M, R)
+    - choose side of pcb for parts
 - Mounting Holes Footprint
 - Outline: Edge.Cuts
 - Track (X)
