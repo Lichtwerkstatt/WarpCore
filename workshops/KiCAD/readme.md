@@ -111,6 +111,7 @@
 ### Special Step Simulations in KiCAD with Spice
 **555 Timer Simulation**
 ![555 Flasher Schematic](files/555flasher_schematic.JPG)
+- [KiCAD Simulation Tutorial](https://www.woolseyworkshop.com/2019/07/01/performing-a-circuit-simulation-in-kicad/)
 - add Splice Models:
   - 555 Timer
   - Diode AOS QTL690C
