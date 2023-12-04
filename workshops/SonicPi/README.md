@@ -17,24 +17,29 @@
 - Ruby ( Lines, Variables, Functions)
 
 ## Basics
-- PLAY Pitch Number, Name Objects, 
+- `print "Hello World"`
+- PLAY Pitch Number
+  - MIDI Number
+  - Name :D5
 - Parallel Execution -> SLEEP
 - USE_BPM (Default 60)
 - **EXERCISE:** Write basic Melody
 - USE_SYNTH
 - SAMPLE
 
+## MOAR PARAMETERS
+- PLAY amp, pan,
+- SAMPLE rate, 
+
 ## LOOPS
-- loop do
+- loop do end
 - x.times do
 - Loops without Sleep, consecutive Loops
 - Threads
 - live_loop
 - **EXERCISE:** write basic drum rythm
 
-## MOAR PARAMETERS
-- PLAY amp, pan,
-- SAMPLE rate,
+
 
 ## RANDOM
 - Loop do play rrand(50,80) sleep 1 -> Float Values
