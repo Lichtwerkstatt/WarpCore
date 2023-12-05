@@ -21,6 +21,7 @@
 - PLAY Pitch Number
   - MIDI Number
   - Name :D5
+  - :r
 - Parallel Execution -> SLEEP
 - basic loop with `x.times do end`
 - USE_BPM (Default 60)
