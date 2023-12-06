@@ -15,6 +15,9 @@
 
 ## Coding Environment
 - Ruby ( Lines, Variables, Functions)
+- Help
+- Preferences
+- Buffer
 
 ## Basics
 - `puts "Hello World"`
@@ -57,6 +60,13 @@ play 36
 - attack, release, sustain
 - start, finish
 - sample_duration
+- chopping
+```
+live_loop :samplechopper do
+  sample :loop_amen_full, num_slices:8, slice:rrand_i(0,7)
+  sleep sample_duration(:loop_amen_full) / 8
+end
+```
 
 ## LOOPS
 - x.times do
@@ -85,6 +95,18 @@ live_loop :foo do
   use_synth :prophet
   play :c1, release: 8, cutoff: rrand(70, 130)
   sleep 8
+end
+```
+
+```
+live_loop :hello do
+  at [0, 1, 2, 3] do
+    sample :drum_bass_soft
+  end
+  at [0.5,1,1.5,2,3.5] do
+    sample :hat_bdu
+  end
+  sleep 4
 end
 ```
 
