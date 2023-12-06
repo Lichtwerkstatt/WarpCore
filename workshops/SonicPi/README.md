@@ -169,6 +169,15 @@ end
 end
 ```
 - Rings
+```
+live_loop :beat do
+  if "x--x--x---x-x-x".ring.tick == "x" then
+    sample...
+    end
+  sleep 0.25
+end
+
+```
 - Chords `puts chord(:E3, :m7)`
   - Arpeggios `play_pattern_timed chord(:E3, :M7), 0.25`
 - Scales `scale(:C3, :harmonic)`
