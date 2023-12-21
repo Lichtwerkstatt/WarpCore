@@ -14,7 +14,9 @@
 - Editors Email
 - Cover Picture, Fancy Illustration, Animation
 -> Workshop, fast and easy in Blender
-- **Question:** Who knows Blender?
+- **Question:** 
+  - Who knows Blender?
+  - Who has worked with 3D Software (CAD)?
 - Blender is a lot
   - might not understand everything
   - workflow oriented
@@ -34,7 +36,7 @@
   - use CAD software for import/export
   - problem a lot of geometry! -> optimization necessary
 - BLENDER
-  - OpticCOre
+  - OpticCore
   - Components Package
 
 ### Components Package Introduction
