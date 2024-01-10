@@ -1,4 +1,4 @@
-# IoT with ESP-32 Workshop
+# Blender Quick Workshop
 
 **Date** : October, 11th 2022  
 **Time** : 9am  
@@ -79,6 +79,9 @@
   - Decimate
 
   ## Sculpting
+
+  ## Ressources
+  - [Computer Shader Graphics Introduction](https://lettier.github.io/3d-game-shaders-for-beginners/rim-lighting.html)
   
   ## Texturing
 
