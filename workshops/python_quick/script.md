@@ -20,7 +20,7 @@
 
 # Script
 
-## Prior Workshop
+## A Priori Workshop
 
 - content = basic concepts of Input, Output, Calculations, Conditions, Repititions
 - goal: learn how to program and work in a basic science data workflow
@@ -34,6 +34,8 @@
 ## Introduction
 
 - Programming a von-Neumann-architecture
+  - Memory, BUS, CPU
+  - ALU, operators, parameters
 - machine and high level programming
 - script languages
 - history of Python
@@ -101,6 +103,13 @@ print("The sum is "+str(sum))
 
 - type(), int(), float()
 
+### Tasks
+
+- What does \*\*, //, % do?
+- What does 1j mean?
+- Is 10/2 the same as 2+3?
+- Write a tax calculator price -> price incl. MwSt (16%).
+
 ### Bonus Knowledge
 
 - simple [data types](https://www.w3schools.com/python/python_datatypes.asp) in python
@@ -108,9 +117,26 @@ print("The sum is "+str(sum))
   - **text** : str(ing)
   - **boolean** : bool(ean)
   - **binary** : bytes, bytearray, memoryview
-- [Fancy ways](https://docs.python.org/3/tutorial/inputoutput.html) of string formatting
+- [Fancy ways](https://docs.python.org/3/tutorial/inputoutput.html) of string formatting print(f'Hallo {a} + {b}')
+- Assign Operators +=, -=
+- Combined Assignment a,b = 2,6
 
 ## [Conditions](https://www.w3schools.com/python/python_conditions.asp)
+
+### Comparison Operators
+
+```python
+true
+false
+3 > 2
+x==5
+x > 5
+x > 5 and x < 10
+not x > 5
+x is 5
+```
+
+### IF THEN ELSE
 
 ```python
 number1 = float(input("Please enter first number: "))
@@ -133,6 +159,8 @@ else:
 
 ### Task
 
+- find out if a number is odd or even
+- is the number square root of another one
 - write a little calculator where one can select operations (+, -, \*, /)
 
 ## Functions
@@ -192,6 +220,8 @@ for x in [1,2,3,4,5]:
 
 - calc sum until 100
 - let user add numbers
+- reverse a string
+- Guessing game
 
 ```python
 result = 0
@@ -203,6 +233,25 @@ for x in numbers
 - let the user choose the operation
 - let the user choose if he wants to restart or quit the program
 - only add up odd/even numbers
+
+```python
+import random
+
+userInput = -1
+randomNumber = random.randint(0, 100)
+count = 0
+while (userInput != randomNumber):
+    count += 1
+    userInput = int(input("Die Zahl für deinen "+str(count)+"-ten Versuch: "))
+    if userInput > randomNumber:
+        print("zu hoch!")
+    elif userInput < randomNumber:
+        print("zu niedrig!")
+    else:
+        print("Gewonnen!")
+        print(str(userInput)+" war die richtige Zahl!")
+        print("Du hast nur "+ str(count)+ " Versuche gebraucht...")
+```
 
 ### Bonus Knowledge
 
@@ -256,6 +305,46 @@ num = 5
 print("The recursive factorial of", num, "is", factorial_rec(num))
 print("The iterative factorial of", num, "is", factorial_iter(num))
 
+```
+
+### And Another real computer science Problem: FIBO
+
+```python
+def fibo_recursive(n):
+    if n == 0 :
+        return 0
+    elif n == 1 :
+        return 1
+    else:
+        return(fibo_recursive(n-1) + fibo_recursive(n-2))
+
+def fibo_iterative(n):
+    a = 0
+    b = 1
+    # a,b = 0,1
+    if n == 0 :
+        return 0
+    elif n == 1 :
+        return 1
+    else :
+        for i in range(1,n):
+            summe = a+b
+            a = b
+            b = summe
+            # a, b = b, a+b
+    return(b)
+
+def fibo_withOptionalList(n, *list):
+    result = [0,1]
+    if n < 2:
+        return result[0:n+1]
+    else :
+        for i in range(2,n+1):
+            result.append(result[i-1]+result[i-2])
+    if list and list[0]:
+        return result
+    else :
+        return result[n]
 ```
 
 # Data Science Stack
