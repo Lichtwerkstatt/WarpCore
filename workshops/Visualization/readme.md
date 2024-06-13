@@ -16,6 +16,10 @@ Tools:
 
 ## 1. Warmup
 
+- Safe place
+- No Shaming!
+- Pin everything!
+
 ### Task
 
 - Fold A4 in half
@@ -24,7 +28,9 @@ Tools:
 
 ## Theory 1
 
-- Document - Data Visualization - Graphic Visualization
+- Graphic Sketchnotes/Facilitation/Recording
+- WHY - WHAT - HOW
+- TEXT - Data Viz - Science Viz
 - CON
   - abstraction
   - space limitation
@@ -52,6 +58,15 @@ Tools:
 
 ## 2. Begriff Abstraktion
 
+Example HOUSE
+
+- icon
+- metaphor : snail, nest, fortress, blanket fortress
+- personification face, moving home, settled home (reading, knitting)
+- usecase , same with person
+- typtography
+- juxtaposition : tall houses, house in weather
+
 Words:
 
 - Gravity
@@ -63,6 +78,13 @@ Words:
 - Atomic Theory
 - Big Bang Theory
 - Radioactivity
+- Cryptography
+- Thermodynamics
+- Black Hole
+- Virus
+- Molecule
+- Vaccine
+- Artificial Intelligence
 
 ### Task
 
@@ -79,11 +101,14 @@ Draw your concept in 5 different ways
 - Pre-Knowledge vs Art
 - easy vs. loss of information
 - choices:
+
   - cultural background (artist vs. audience)
   - training
   - time / ressources
   - tools available
   - audience want/expect
+
+  Example Smily on TShirt
 
 ## 3. Shapes!
 
@@ -104,11 +129,25 @@ Change proportions of some shapes and see what happens
 
 - Electron-Microscope
 - PEEM
--
 
-## 4. Line of Action
+## 4. Combine Shapes
 
-- Line of Action
+- Where is my line?
+- Overlap
+- Partial Overlap
+- Union
+- Smooth
+- distant smooth
+- effects folds
+
+- art style: thickness, wiggles = texture and space
+
+## 5. Line of Action
+
+- Dynamics, Movement
+- Line of Action -> Silhouette
+- Keep Volume
+- Build Anticipation
 
 ### Tasks
 
@@ -120,10 +159,31 @@ Let the device do sports:
 - javelin
 -
 
-## 5 Faces and Emotions
+## 6 Faces and Emotions
 
-## 6. Reinzeichnung
+- move shapes
 
 ## 7. Third Dimension
 
-## 8 Gradient Blops
+- Shapes!
+- Perspective: isometric, vanishing point
+- Arrange Elements
+- Cross Sections
+- Center Lines - Line of Action
+- Project Text / Images
+- Wiggle perspective is fine.
+
+## 8 Gradient
+
+- Where is the light?
+  - Shadow lines
+- Dark shadows first
+- Gradient Shadows
+- Reflected Light
+
+## 9 Let's go realistic
+
+- Example : Cube, Zylinder
+- no lines, only gradients
+- values
+- positive negative space
