@@ -2,6 +2,28 @@
 
 ## Part 1 : SLA Printing and Handling
 
+- FDM
+- SLS
+- SLA
+
+  - DLP
+  - Two Photon Polymerization
+
+- Printer
+
+  - Build Plate
+  - Resin Tank with FEP Foil
+  - Projector with Colimator Lenses
+
+- Slicing
+  - Loading Model
+  - Aligning Model
+  - Support (Batman)
+  - Slice -> Islands
+  - Print Parameters -> PRINTER
+  - Hollow
+  - Holes
+
 ## Part 2 : 3D Sculpting in Blender
 
 - Blender, ZBrush, Nomad Sculpt
@@ -47,5 +69,20 @@ Sculpting Workspace
 
 - Exercises:
   - Frog Face
+  - Beard Batman
+  - Einstein Tongue
 
 ## Part 3 : Postprocessing SLA prints
+
+- Gloves Dirty Hand / Clean Hand
+- Pan & Tissues
+- Off the Buildplate
+  - Scraper
+  - Check Print for lost parts and Foil -> Resin filter change necessary
+  - Clean with IPA
+- Wash
+  - Washer
+  - Brush
+  - Look out for shiny parts
+- Curing
+- Clean everything (tools and workplace)
