@@ -207,6 +207,20 @@ print(x.grad)
 - Mean Square Error (MSE) / squares Units as well
 - Root Mean Square Error (RMSE)
 
+### Theory of ANNs
+
+#### Perceptron
+- going back to Neuron
+- Nucleus, Dendrites (Inputs), Axon (Output)
+- Perzeptron 1958 Frank Rosenblatt / 1934 McCulloghPitts
+- Inputs, Weights, Output, Bias
+
+#### Artificial Neural Network 
+- Input & Output Layers
+- Hidden Layer (Fully Connected)
+- Deep Neural Network (2 or more hidden layer)
+- ANN Topologies
+
 ### Linear Regression
 
 ```python
