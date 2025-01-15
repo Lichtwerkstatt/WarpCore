@@ -214,12 +214,38 @@ print(x.grad)
 - Nucleus, Dendrites (Inputs), Axon (Output)
 - Perzeptron 1958 Frank Rosenblatt / 1934 McCulloghPitts
 - Inputs, Weights, Output, Bias
+- Activation Function (Classification Tasks, Limit Outputs to 0 and 1)
+   - Step Function ( 0, 1)
+   - Sigmoid Function (0 - 1) 
+   - Hyperbolic Tangent (-1 - 1)
+   - Rectified Linear Unit (ReLU) (Cut at 0)
+   - Softmax (Multiclassification)
+   - see Wikipedia Activatio Functions
 
 #### Artificial Neural Network 
 - Input & Output Layers
 - Hidden Layer (Fully Connected)
 - Deep Neural Network (2 or more hidden layer)
 - ANN Topologies
+- can approximate **any (convex) continuous function** (Zhou Lu & Boris Hanin Universal Approximation Theorem)
+
+#### Cost Functions and Gradient Descent
+- measure Loss/Error by compare to training data -> single Value
+- o(z) = a (o perceptron), y = real value
+- C(W,B,S,E) huge function! [Link](https://stats.stackexchange.com/questions/154879/a-list-of-cost-functions-used-in-neural-networks-alongside-applications)
+- how to minimize C(w1,w2,....b1,...)?
+- Minimal Exercise with single Perceptron -> derivative for 0
+- n-dimensional -> stochastic process of gradient descent
+- step size, small -> takes long, too big -> overshoot = LEARNING RATE
+- adaptive gradient descent, ADAM
+- cross entropy and quadratic cost
+
+#### Backpropagation
+- Costfunction -> Update Weights
+- Minimal Bsp 1 Neuron Network C(w1,b1,w2,b3,w3,b3)
+- from Back to Front
+- Chain Rule Derivative
+- Hadamard Product (element by element)
 
 ### Linear Regression
 
