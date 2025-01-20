@@ -519,3 +519,203 @@ with torch.no_grad():
     print(labels[new_model(mystery_iris).argmax()])
 
 ```
+
+## Convolutional Neural Network
+
+### Problem:
+
+- image data, each pixel an input
+- fully connected -> a lot of links -> a lot of parameters
+- also 2-dimensional information is lost
+- very similar, well centered images
+- use kernels to preprocess, Theory Image kernels
+- Applying Kernels, Example (Website)
+  - setosa.io/ev/image-kernels
+  - Multiply by Filterweights
+  - Sum Results -> resulting greyscale
+  - Extend Image = Padding
+- Convolutional Kernels = Learning Convolutional Layers
+
+### Convolutional Layers
+
+- Example 1D, 2D etc. Multicolor (RGB)
+- Parameter Reduction (local Connections)
+- Window/Stride Size, Adding more Filters (Complexity)
+  = Convolutional Layer (zB RGB Kanäle)
+- Convolutional Stacks (more more Complexity)
+
+### Pooling Layers
+
+- Input -> Convolutional -> Pooling
+- Up/Down Sampling
+- Max, Average Pooling
+- Complexity Reduction but keeping Trends/Patterns
+
+Bsp:
+AlexNet, LeNet-5, GoogLeNet, ResNet, etc.
+
+```python
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+from torch.utils.data import DataLoader
+from torchvision import datasets, transforms
+from torchvision.utils import make_grid
+
+import numpy as np
+import pandas as pd
+from sklearn.metrics import confusion_matrix
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+transform = transforms.ToTensor()
+
+train_data = datasets.MNIST(root='../Data', train=True, download=True, transform=transform)
+test_data = datasets.MNIST(root='../Data', train=False, download=True, transform=transform)
+
+train_loader = DataLoader(train_data, batch_size=10, shuffle=True)
+test_loader = DataLoader(test_data, batch_size=10, shuffle=False)
+```
+
+Check out data, Test by 1 Picture
+
+```python
+conv1 = nn.Conv2d(1, 6, 3, 1)
+conv2 = nn.Conv2d(6, 16, 3, 1)
+for i, (X_train, y_train) in enumerate(train_data):
+    break
+x = X_train.view(1,1,28,28)
+print(x.shape)
+x = F.relu(conv1(x))
+print(x.shape)
+x = F.max_pool2d(x, 2, 2)
+print(x.shape)
+x = F.relu(conv2(x))
+print(x.shape)
+x = F.max_pool2d(x, 2, 2)
+print(x.shape)
+x = x.view(-1, 5*5*16)
+print(x.shape)
+```
+
+```python
+class ConvolutionalNetwork(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.conv1 = nn.Conv2d(1, 6, 3, 1)
+          #Input Channel 1=Greyscale
+          #6 Feature Map Output Filters
+          #3x3 Filter
+          #1 Stepsize
+        self.conv2 = nn.Conv2d(6, 16, 3, 1)
+          # 6 from before
+          # 16 features
+          # 3x3 Filter
+          # Stepsize
+        self.fc1 = nn.Linear(5*5*16, 120)
+        self.fc2 = nn.Linear(120, 84)
+        self.fc3 = nn.Linear(84,10)
+
+    def forward(self, X):
+        X = F.relu(self.conv1(X))
+        X = F.max_pool2d(X, 2, 2)
+          # Kernel size 2
+          # Stride of 2
+        X = F.relu(self.conv2(X))
+        X = F.max_pool2d(X, 2, 2)
+        X = X.view(-1, 5*5*16)
+        X = F.relu(self.fc1(X))
+        X = F.relu(self.fc2(X))
+        X = self.fc3(X)
+        return F.log_softmax(X, dim=1)
+```
+
+```python
+torch.manual_seed(42)
+model = ConvolutionalNetwork()
+model
+
+criterion = nn.CrossEntropyLoss()
+optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+
+import time
+start_time = time.time()
+
+epochs = 5
+train_losses = []
+test_losses = []
+train_correct = []
+test_correct = []
+
+for i in range(epochs):
+    trn_corr = 0
+    tst_corr = 0
+
+    # Run the training batches
+    for b, (X_train, y_train) in enumerate(train_loader):
+        b+=1
+
+        # Apply the model
+        y_pred = model(X_train)  # we don't flatten X-train here
+        loss = criterion(y_pred, y_train)
+
+        # Tally the number of correct predictions
+        predicted = torch.max(y_pred.data, 1)[1]
+        batch_corr = (predicted == y_train).sum()
+        trn_corr += batch_corr
+
+        # Update parameters
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+
+        # Print interim results
+        if b%600 == 0:
+            print(f'epoch: {i:2}  batch: {b:4} [{10*b:6}/60000]  loss: {loss.item():10.8f}  \
+accuracy: {trn_corr.item()*100/(10*b):7.3f}%')
+
+    train_losses.append(loss)
+    train_correct.append(trn_corr)
+
+    # Run the testing batches
+    with torch.no_grad():
+        for b, (X_test, y_test) in enumerate(test_loader):
+
+            # Apply the model
+            y_val = model(X_test)
+
+            # Tally the number of correct predictions
+            predicted = torch.max(y_val.data, 1)[1]
+            tst_corr += (predicted == y_test).sum()
+
+    loss = criterion(y_val, y_test)
+    test_losses.append(loss)
+    test_correct.append(tst_corr)
+
+print(f'\nDuration: {time.time() - start_time:.0f} seconds') # print the time elapsed
+```
+
+Test Data
+
+```python
+
+test_load_all = DataLoader(test_data, batch_size=10000, shuffle=False)
+with torch.no_grad():
+    correct = 0
+    for X_test, y_test in test_load_all:
+        y_val = model(X_test)  # we don't flatten the data this time
+        predicted = torch.max(y_val,1)[1]
+        correct += (predicted == y_test).sum()
+print(f'Test accuracy: {correct.item()}/{len(test_data)} = {correct.item()*100/(len(test_data)):7.3f}%')
+```
+
+Confusion Matrix
+
+```python
+np.set_printoptions(formatter=dict(int=lambda x: f'{x:4}'))
+print(np.arange(10).reshape(1,10))
+print()
+
+# print the confusion matrix
+print(confusion_matrix(predicted.view(-1), y_test.view(-1)))
+```
