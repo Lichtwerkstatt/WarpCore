@@ -35,6 +35,11 @@ Intro:
 
 - Blender 3D Suite / Generalist Software
 - Addons (Import, Funktionen)
+  - Microscopy Nodes
+  - BlenderGIS
+  - Blender Molecular Nodes
+  - Bioxel
+  - Blender for Biologists
 - Animation/Bilder : 2D/3D/StopMotion
 
 GUI
