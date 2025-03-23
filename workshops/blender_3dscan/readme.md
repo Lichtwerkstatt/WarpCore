@@ -44,15 +44,22 @@ Intro:
 
 GUI
 
+- Panels
+- Viewport
+
 Transform
 
 Object/Mesh
 
+- Edit
 - AutoSmooth
 
 Material
 
 - Shader nodes
+- UV Mapping
+
+Sculpting
 
 ## 3D Scans
 
@@ -115,6 +122,8 @@ Rendering:
 
 - Variante 2)
   Remesh -> Voxel Remesh
+- Variante 3)
+  Remesh Modifier, Fills Holes
 - InstantMeshes Programm
 - Redefine UVs
 
