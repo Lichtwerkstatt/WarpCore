@@ -4,7 +4,24 @@ June, 2025
 
 ## Intro
 
+- Introduction
+- Lichtwerkstatt
+- Relation to Game Dev
+- Ask
+  - Age
+  - Background
+  - Preknowledge Programming
+  - Projects?
+  - English?
+- LW Workshop Gaming&Creatvity
+- Game Engines, What for?
+- Tasks for Game Engine
+- Common Game Engines
+- Game Tree
+
 ## Setup Project
+
+- New Project
 
 ## First Test
 
