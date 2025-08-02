@@ -78,4 +78,47 @@ func _input(event:InputEvent) -> void:
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 ```
 ### Vertically
+- add camera to Player, move up 0.3m
+- cerate @onready variable by Ctrl-Dragging into script
+```python
+camera_3d.rotate_x(-event.relative.y*0.001)
+camera_3d.rotation_degrees.x = clampf(
+	camera_3d.rotation_degrees.x, -90.0, 90.0)
+```
+- Clamp value to prevent overshoot
+- optional : smoothing
+
+### Reticles
+- Player Scene Root, add Center Container
+- Size Options -> FUll Screen
+- Add ControlNode, rename to Crosshair
+- add script, draw with _draw Function
+```python
+extends Control
+func _draw() -> void:
+	draw_circle(Vector2.ZERO, 3, Color.WHITE)
+	draw_line(Vector2(0,-10),Vector2(0,-20),Color.WHITE,2)
+```
+## Adapt Jumping
+- add variable for jump height instead of jump velocity
+- umstellen Hmax = V^2 / 2g -> V = sqrt(Hmax*2g)
+```python
+@export var jumpHeight : float = 1.0
+...
+velocity.y = sqrt(jumpHeight*2*get_gravity().length())
+```
+- add Test Level
+  - add csgBox, move with Snapping (Shift Fine Movement)
+  - Tweak Material, Albedo Orange
+  - Duplicat and extend shapes in Snapping Mode (jumpable and unjumpable)
+
+
+
+
+
+
+
+
+
+
 
