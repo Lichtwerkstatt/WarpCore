@@ -112,10 +112,16 @@ velocity.y = sqrt(jumpHeight*2*get_gravity().length())
   - Tweak Material, Albedo Orange
   - Duplicat and extend shapes in Snapping Mode (jumpable and unjumpable)
 
- ## Building a Sandbox Level
- - organize level objects under Node3D
- - save materials in material folder
- - add larger structures with quickLoad Materials
+## Building a Sandbox Level
+- new scene : first level
+- save materials in material folder
+  - add prototyping textures to materials
+  - add albedo/texture
+  - UV1 : triplanar, world triplanar
+  - reset albedo color
+- add csg box with prototyping material, flip faces
+- use CSGcombiner node
+- add larger structures with quickLoad Materials
 
 
 
