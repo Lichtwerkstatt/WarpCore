@@ -1,16 +1,19 @@
 # 3D Shooter
+
 Ferienworkshop 4.-8.8.2025
 
 ## Prep
+
 - Frage Programmierung
 - Frage Mathematik
 - Frage Englisch
 
 ## Setup Project
+
 - New Project (Forward+)
 - Sprache auf DE stellen
 - new 3D Scene
-  - rename to Sandbox 
+  - rename to Sandbox
   - Save Scene as Sandbox
 - Add CSBox3D (64x64x1m)
   - move 0.5m down (groundfloor)
@@ -22,22 +25,24 @@ Ferienworkshop 4.-8.8.2025
 - add Camera
   - rename
   - move slightly up
- 
+
 ## Interlude
+
 - Add RigidBody3D
   - Add MeshInstance3D
   - Add CollisionShape3D
   - move RigidBody up, rotate slightly
   - Run Game
 - Add Script to RigidBody (Default Template)
-  - _ready Helloworld
-  	- Einführung Programmierung
+  - \_ready Helloworld
+    - Einführung Programmierung
     - Variablen
     - Zuweisung
     - Vergleich
     - Entscheidung
-    - Objekte	
-  - _process Test, position.y
+    - Objekte
+  - \_process Test, position.y
+
 ```python
 if Input.is_action_pressed("ui_right"):
 	position.x = position.x + 0.1
@@ -46,27 +51,32 @@ if Input.is_action_pressed("ui_left"):
 if Input.is_action_pressed("ui_up"):
 	position.y += delta
 ```
+
 **TODO** Umbauen auf Velocity Vector
 Introduction into Vectormath
-   
+
 ## 1st Person Movement
+
 - Create New Scene, Root : CharacterBody3D
-	- rename Player
-	- add MeshInstance3D:Capsule
- 	- add CollisionShape3D:Capsule
+  - rename Player
+  - add MeshInstance3D:Capsule
+  - add CollisionShape3D:Capsule
 - Attach Script : Templaste CharacterBody3D
-	- Explain Code
+  - Explain Code
 - ? New Input Bindings "move_forward", "move_left", ... and "jump"
 - SandbooxRootNode RMB -> Instantiate Child Scene : Player
- 	- move 1m up
+  - move 1m up
 - Move Campera to Player
 
 ## Looking around
+
 ### Horizontally
+
 ```python
 func _input(event:InputEvent) -> void:
 	print(event)
 ```
+
 ```python
 func _ready()->void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -77,42 +87,53 @@ func _input(event:InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 ```
+
 ### Vertically
+
 - add camera to Player, move up 0.3m
 - cerate @onready variable by Ctrl-Dragging into script
+
 ```python
 camera_3d.rotate_x(-event.relative.y*0.001)
 camera_3d.rotation_degrees.x = clampf(
 	camera_3d.rotation_degrees.x, -90.0, 90.0)
 ```
+
 - Clamp value to prevent overshoot
 - optional : smoothing
 
 ### Reticles
+
 - Player Scene Root, add Center Container
 - Size Options -> FUll Screen
 - Add ControlNode, rename to Crosshair
-- add script, draw with _draw Function
+- add script, draw with \_draw Function
+
 ```python
 extends Control
 func _draw() -> void:
 	draw_circle(Vector2.ZERO, 3, Color.WHITE)
 	draw_line(Vector2(0,-10),Vector2(0,-20),Color.WHITE,2)
 ```
+
 ## Adapt Jumping
+
 - add variable for jump height instead of jump velocity
-- umstellen Hmax = V^2 / 2g -> V = sqrt(Hmax*2g)
+- umstellen Hmax = V^2 / 2g -> V = sqrt(Hmax\*2g)
+
 ```python
 @export var jumpHeight : float = 1.0
 ...
 velocity.y = sqrt(jumpHeight*2*get_gravity().length())
 ```
+
 - add Test Level
   - add csgBox, move with Snapping (Shift Fine Movement)
   - Tweak Material, Albedo Orange
   - Duplicat and extend shapes in Snapping Mode (jumpable and unjumpable)
 
 ## Building a Sandbox Level
+
 - new scene : first level
 - save materials in material folder
   - add prototyping textures to materials
@@ -123,13 +144,122 @@ velocity.y = sqrt(jumpHeight*2*get_gravity().length())
 - use CSGcombiner node
 - add larger structures with quickLoad Materials
 
+## Adding a Weapon
 
+- import GLB into new Weapons Folder, Double-Click -> Reimport
+- Instatiate Child Scene, Transform Coordinates in Preview Mode
+- New Scene Weapon
+- Add Timer, name Cooldown
+  - One Shot : True
+- add Script to Weapon
+  - add LMB as shoot
 
+```python
+var fire_rate := 14
 
+@onready var cool_down = $CoolDown
 
+func _process(delta):
+	if Input.is_action_pressed("feuer") and cool_down.is_stopped():
+		cool_down.start(1.0 / fire_rate)
+		print("Weapon fired!")
+```
 
+- add inherited scene of weapon,
+  - rename root node to SMG
+  - save and name SMG
+- copy weapon mesh from spieler to SMG scene
+- add child scene SMG to spieler
 
+### Adding Recoil and Raycasts
 
+- define distance of recoil
+- define weapon_mesh in weapon script to specify in SMG
+- safe original position of weapon mesh in variable
+- build shoot function with recoil
+- lerp back in \_process
 
+```python
+@export var fire_rate := 14.0
+@export var recoil := 0.05
+@export var weapon_mesh : Node3D
 
+@onready var cool_down = $CoolDown
+@onready var weapon_position: Vector3 = weapon_mesh.position
 
+func _process(delta):
+	if Input.is_action_pressed("feuer") and cool_down.is_stopped():
+		shoot()
+	weapon_mesh.position = weapon_mesh.position.lerp(weapon_position, delta*10)
+
+func shoot() -> void:
+	cool_down.start(1.0 / fire_rate)
+	print("Weapon fired!")
+	weapon_mesh.position.z += recoil
+```
+
+- add Raycast3d to weapon scene
+- change vector to 0,0,-100
+- import onready in SMG script
+- print(raycast.get_collider())
+
+### Particles
+
+- add GPUparticles node to SMG scene, align with barrel, rename MuzzleFlash
+- Draw Passes, Mesh 1 : BoxMesh
+- Process Material : Particle Process Material
+- Resize Particle BoxMesh : 0.1m
+- Time Explosiveness : 1
+- Particle Process Material
+  - Gravity : off
+  - Initial Velocity : min 2, max 4 / min 6 to 10
+  - Direction : 0 0 -1
+  - Spread : 8
+  - Display/Scale : new CurveTexture, right down
+  - Lifetime : 1.0/14.0
+  - Fixed FPS: 60
+- Geometry Instance
+  - Material Override, NewStandardMaterial3D
+  - Emission : White, Energy 5
+- Time: OneShot ON, Drawing Local Coords: ON, Shadows Cast Shadow OFF
+- add export variable for muzzle_flash
+
+```python
+@export var muzzle_flash : GPUParticles3D
+...
+func shoot() -> void:
+	muzzle_flash.restart()
+```
+
+- create new scene, gpuparticle node, rename sparks and save
+- draw passes, pass 1 : new boxMesh, resize 0.1
+- material override : emissive yellow material
+- new ParticleProcessMaterial
+  - spread 180
+  - velocity : 1 to 5
+  - display scale 0.5 to 1
+  - scale curve like above
+- Time Lifetime 0.5
+- Explosiveness 1
+- Cast Shadow Off
+- Transform Top Level ON
+- OneShot ON
+- Add AnimationPlayer to SparkNode
+  - new Animation named spark
+    - Autoplay
+    - Sparks Node -> Emitting Keyframe
+    - first kreyframe : change value to on
+  - add method track
+    - last keyframe : queue_free() method
+- weapon script
+  - add export variable for packed scene
+  - load sparks scene into inspector
+  - instatiate and reposition sparks
+
+```python
+@export var sparks : PackedScene
+...
+var spark = sparks.instantiate()
+add_child(spark)
+spark.global_position = ray_cast_3d.get_collision_point()
+```
