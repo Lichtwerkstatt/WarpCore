@@ -263,3 +263,12 @@ var spark = sparks.instantiate()
 add_child(spark)
 spark.global_position = ray_cast_3d.get_collision_point()
 ```
+## Ammunition (simple mode -> adapt later for multiple types of ammunition
+- Add AmmoHandler node in Player Scene
+- class_name AmmoHandler
+- variable for Ammo amount
+- get and set functions
+  - has_ammo
+  - use_ammo
+- add ammo handler export variable to weapon script
+- use_ammo in shoot function
