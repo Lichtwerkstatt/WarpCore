@@ -314,7 +314,8 @@ ammoLabel.text = str(ammo)
 - add script to root node
 - add listener body_enters
 - access export variable for weapon_handler in spieler script
-´´´python
+ 
+```python
 extends Area3D
 
 @export var amount := 20
