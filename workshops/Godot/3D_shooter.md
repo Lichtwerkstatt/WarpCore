@@ -270,5 +270,39 @@ spark.global_position = ray_cast_3d.get_collision_point()
 - get and set functions
   - has_ammo
   - use_ammo
+```python
+extends Node3D
+class_name WeaponHandler
+
+var ammo := 60
+
+func has_ammo() -> bool:
+	return(ammo > 0)
+	
+func use_ammo() -> void:
+	ammo -= 1
+	print("Munition : "+str(ammo))
+```
+    
 - add ammo handler export variable to weapon script
 - use_ammo in shoot function
+```python
+@export var weaponHandler : WeaponHandler
+...
+if weaponHandler.has_ammo() :
+		weaponHandler.use_ammo()
+		muzzle_flash.restart()
+...
+```
+### Ammo Label
+- add margin container in Player Scene, Full Screen, Apply Margin of 8
+- add label bottom right
+  - new LabelSettings
+  - Fontsize up 	
+- export label in AmmoHandler Script
+- update label in _ready and use_ammo
+```python
+@export var ammoLabel : Label
+...
+ammoLabel.text = str(ammo)
+```
