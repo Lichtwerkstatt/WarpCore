@@ -306,3 +306,21 @@ if weaponHandler.has_ammo() :
 ...
 ammoLabel.text = str(ammo)
 ```
+
+### Ammo Pickup
+- new Scene based on Area3D name AmmoPickups
+- add mesh cube, size 0.5 , angled
+- add collision sphere 1m
+- add script to root node
+- add listener body_enters
+- access export variable for weapon_handler in spieler script
+´´´python
+extends Area3D
+
+@export var amount := 20
+
+func _on_body_entered(body: Node3D) -> void:
+	body.weapon_handler.add_ammo(amount)
+	queue_free()
+```
+- update add_ammo function in weapon handler script
