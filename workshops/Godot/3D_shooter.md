@@ -264,13 +264,16 @@ var spark = sparks.instantiate()
 add_child(spark)
 spark.global_position = ray_cast_3d.get_collision_point()
 ```
+
 ## Ammunition (simple mode -> adapt later for multiple types of ammunition
+
 - Add AmmoHandler node in Player Scene
 - class_name AmmoHandler
 - variable for Ammo amount
 - get and set functions
   - has_ammo
   - use_ammo
+
 ```python
 extends Node3D
 class_name WeaponHandler
@@ -279,14 +282,15 @@ var ammo := 60
 
 func has_ammo() -> bool:
 	return(ammo > 0)
-	
+
 func use_ammo() -> void:
 	ammo -= 1
 	print("Munition : "+str(ammo))
 ```
-    
+
 - add ammo handler export variable to weapon script
 - use_ammo in shoot function
+
 ```python
 @export var weaponHandler : WeaponHandler
 ...
@@ -295,13 +299,16 @@ if weaponHandler.has_ammo() :
 		muzzle_flash.restart()
 ...
 ```
+
 ### Ammo Label
+
 - add margin container in Player Scene, Full Screen, Apply Margin of 8
 - add label bottom right
   - new LabelSettings
-  - Fontsize up 	
+  - Fontsize up
 - export label in AmmoHandler Script
-- update label in _ready and use_ammo
+- update label in \_ready and use_ammo
+
 ```python
 @export var ammoLabel : Label
 ...
@@ -309,13 +316,14 @@ ammoLabel.text = str(ammo)
 ```
 
 ### Ammo Pickup
+
 - new Scene based on Area3D name AmmoPickups
 - add mesh cube, size 0.5 , angled
 - add collision sphere 1m
 - add script to root node
 - add listener body_enters
 - access export variable for weapon_handler in spieler script
- 
+
 ```python
 extends Area3D
 
@@ -325,4 +333,99 @@ func _on_body_entered(body: Node3D) -> void:
 	body.weapon_handler.add_ammo(amount)
 	queue_free()
 ```
+
 - update add_ammo function in weapon handler script
+
+## Enemies
+
+- set up **navigation server**
+  - add navigation region to sandbox
+  - new navmesh
+  - put level under navmesh
+  - bake mesh
+- new scene, characterBody, rename **enemy**
+- copy and paste mesh and collider from player scene
+- add navigation agent
+- attach script to root, template movement
+  - comment move_and_slide
+  - generate reference to nagivation agent
+  - get reference to player by group
+  - set player pos as target
+- enable Debug Mode in Agent
+- put player into new player group
+
+### Enemy Movement
+
+- delete unecessary code for movement
+- add movement based on direction
+- check for player in pickup script
+
+```python
+if body.is_in_group("player"):
+		body.ammoHandler.add_ammo(amount)
+		queue_free()
+```
+
+- adapt speed in enemy script
+
+```python
+@onready var navAgent = $NavigationAgent3D
+var player
+
+func _ready():
+	player = get_tree().get_first_node_in_group("player")
+
+func _physics_process(delta):
+	navAgent.target_position = player.global_position
+	var next_pos = navAgent.get_next_path_position()
+
+	# Add the gravity.
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+
+	var direction = global_position.direction_to(next_pos)
+	if direction:
+		velocity.x = direction.x * SPEED
+		velocity.z = direction.z * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.z = move_toward(velocity.z, 0, SPEED)
+
+	move_and_slide()
+```
+
+### Range Attack
+
+- add provoked bool variable
+- add export range value
+- calculate distance
+- set provoked based on distance
+- only update next_pos when provoked
+
+```python
+  if aggro:
+  navAgent.target_position = player.global_position
+  var next_pos = navAgent.get_next_path_position()
+  ...
+  var distance = global_position.distance_to(player.global_position)
+  if distance <= aggroRange:
+  aggro = true
+```
+
+## Gimmicks
+
+### Shootable Boxes
+
+- new Scene Ballerkiste made of RigidObjects
+- Mesh and Collider
+- put in Group "impulse"
+- extend shooting script by
+
+```python
+var object = ray_cast_3d.get_collider()
+if object.is_in_group("impulse"):
+	var from = ray_cast_3d.global_position
+	var to = ray_cast_3d.get_collision_point()
+	var impulse = (to-from).normalized() * 10
+	object.apply_impulse(impulse,(object.global_position - to))
+```
