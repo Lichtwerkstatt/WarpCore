@@ -483,6 +483,63 @@ func reduce_health(amount) -> void:
 ```
 - call reduce health in enemy attack function
 
+
+### Damage Feedback
+- import damage.png
+- add textureRect in Player, Fullscreen
+  - texture quickload damage.png
+  - Layout/Transform/Pivot to center
+- add Animationplayer
+  - "TakeDamage" 0.4 sec
+  - scale 1 to 1.5
+  - transparency 1 to 0, Visibility/Modulate
+- reference AnimationPlayer in Player Script
+- play animation when hit
+- repair RESET Track, put modulate to transparent
+
+### GAME OVER
+- find nice font on Google Font -> ttf file, "staatliches"
+- new scene, Control Node, GameOverMenu
+- new Theme Object
+  - Default Font
+  - Default Size 64px
+- add Center Container, Fullsize
+- add VBox Container, Layout Custom min X : 512
+- add Label "You Dead", align center
+ - LabelSettings, increase Fontsize 96px 
+- add Button "Again"
+- Duplicate Button "Exit"
+- Rename Buttons
+- add Script to Root
+  - pick Button
+  - Signals : pressed, connect to script
+  - same for other button
+  - add game over func
+```python
+extends Control
+
+func game_over() -> void:
+	visible = true
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
+func _on_button_pressed() -> void:
+	get_tree().reload_current_scene()
+
+func _on_button_2_pressed() -> void:
+	get_tree().quit()
+```
+- instantiate menu in player scene, move to bottom
+- make invisible
+- put reference into player script
+- call game_over method
+
+- pause game with
+```python
+get_tree().paused = true
+```
+- set to false before restarting
+- set menu process mode to ALWAYS
+
 ## Gimmicks
 
 ### Shootable Boxes
