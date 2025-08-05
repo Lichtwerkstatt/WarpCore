@@ -412,6 +412,77 @@ func _physics_process(delta):
   aggro = true
 ```
 
+### Enemy Attack
+- add visor in front of enemy scene
+- script
+  - look at function to look into direction (only y rotation)
+  - vgl. zu look_at
+  - add look at walking direction in script
+```python
+if direction:
+  look_at_target(direction)
+...
+func look_at_target(direction) -> void :
+	var adjusted = direction
+	adjusted.y = 0
+	look_at(global_position+adjusted, Vector3.UP, true)
+```
+
+- add export var attackRange 1.5
+- check if in Attack Range
+```python
+@export var attackRange := 1.5
+...
+if aggro and distance < 1.5 :
+  print("Enemy Attack!")
+```
+
+- add animation player
+- add "Attack" animation, length to 0.5
+- animate transform and size of visor, generate keyframes
+- 0.2 bigger and forward and keyframe
+- end of animation reset and keyframe
+- keyframe albedo
+- select all keyframes and ajust easing
+- add reference to animation player
+- start animation when attacking
+```python
+animation_player.play("attack")
+```
+
+- define attack function in script
+- call method in animation
+
+### Giving Enemy Damage
+
+- add export health to enemy
+- add reduce health function which deletes enemy
+- provoke enemy if shot
+```python
+func reduce_health(amount) -> void:
+	health -= amount
+	if health <= 0:
+		queue_free()
+```
+- check for object in weapon
+- reduce health by damage amount
+```python
+var object = ray_cast_3d.get_collider()
+if object.is_in_group("enemy"):
+  object.reduce_health(damage)
+```
+
+### Giving Player Damage
+- add health variable to player
+- add reduce health function to player
+```python
+func reduce_health(amount) -> void:
+	health -= amount
+	if health <= 0:
+		print("GAME OVER!")
+```
+- call reduce health in enemy attack function
+
 ## Gimmicks
 
 ### Shootable Boxes
