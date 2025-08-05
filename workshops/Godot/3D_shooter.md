@@ -190,7 +190,8 @@ func _process(delta):
 func _process(delta):
 	if Input.is_action_pressed("feuer") and cool_down.is_stopped():
 		shoot()
-	weapon_mesh.position = weapon_mesh.position.lerp(weapon_position, delta*10)
+	weapon_mesh.position =
+		weapon_mesh.position.lerp(weapon_position, delta*10)
 
 func shoot() -> void:
 	cool_down.start(1.0 / fire_rate)
