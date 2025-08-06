@@ -116,6 +116,13 @@ func _draw() -> void:
 	draw_line(Vector2(0,-10),Vector2(0,-20),Color.WHITE,2)
 ```
 
+### Zoom
+
+- zoom bool variable
+- animation Camera FOV
+  play and play.backwards
+- Textured Rect Overlay
+
 ## Adapt Jumping
 
 - add variable for jump height instead of jump velocity
@@ -413,11 +420,13 @@ func _physics_process(delta):
 ```
 
 ### Enemy Attack
+
 - add visor in front of enemy scene
 - script
   - look at function to look into direction (only y rotation)
   - vgl. zu look_at
   - add look at walking direction in script
+
 ```python
 if direction:
   look_at_target(direction)
@@ -430,6 +439,7 @@ func look_at_target(direction) -> void :
 
 - add export var attackRange 1.5
 - check if in Attack Range
+
 ```python
 @export var attackRange := 1.5
 ...
@@ -446,6 +456,7 @@ if aggro and distance < 1.5 :
 - select all keyframes and ajust easing
 - add reference to animation player
 - start animation when attacking
+
 ```python
 animation_player.play("attack")
 ```
@@ -458,14 +469,17 @@ animation_player.play("attack")
 - add export health to enemy
 - add reduce health function which deletes enemy
 - provoke enemy if shot
+
 ```python
 func reduce_health(amount) -> void:
 	health -= amount
 	if health <= 0:
 		queue_free()
 ```
+
 - check for object in weapon
 - reduce health by damage amount
+
 ```python
 var object = ray_cast_3d.get_collider()
 if object.is_in_group("enemy"):
@@ -473,18 +487,21 @@ if object.is_in_group("enemy"):
 ```
 
 ### Giving Player Damage
+
 - add health variable to player
 - add reduce health function to player
+
 ```python
 func reduce_health(amount) -> void:
 	health -= amount
 	if health <= 0:
 		print("GAME OVER!")
 ```
+
 - call reduce health in enemy attack function
 
-
 ### Damage Feedback
+
 - import damage.png
 - add textureRect in Player, Fullscreen
   - texture quickload damage.png
@@ -498,6 +515,7 @@ func reduce_health(amount) -> void:
 - repair RESET Track, put modulate to transparent
 
 ### GAME OVER
+
 - find nice font on Google Font -> ttf file, "staatliches"
 - new scene, Control Node, GameOverMenu
 - new Theme Object
@@ -506,7 +524,7 @@ func reduce_health(amount) -> void:
 - add Center Container, Fullsize
 - add VBox Container, Layout Custom min X : 512
 - add Label "You Dead", align center
- - LabelSettings, increase Fontsize 96px 
+- LabelSettings, increase Fontsize 96px
 - add Button "Again"
 - Duplicate Button "Exit"
 - Rename Buttons
@@ -515,6 +533,7 @@ func reduce_health(amount) -> void:
   - Signals : pressed, connect to script
   - same for other button
   - add game over func
+
 ```python
 extends Control
 
@@ -528,15 +547,18 @@ func _on_button_pressed() -> void:
 func _on_button_2_pressed() -> void:
 	get_tree().quit()
 ```
+
 - instantiate menu in player scene, move to bottom
 - make invisible
 - put reference into player script
 - call game_over method
 
 - pause game with
+
 ```python
 get_tree().paused = true
 ```
+
 - set to false before restarting
 - set menu process mode to ALWAYS
 
