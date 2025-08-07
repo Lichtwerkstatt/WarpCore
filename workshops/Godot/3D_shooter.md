@@ -351,6 +351,16 @@ func _on_body_entered(body: Node3D) -> void:
 
 - update add_ammo function in weapon handler script
 
+
+### Adding a Shader to Pickup
+- add SphereMesh
+- add ShaderMaterial in Override
+- new Shader (VisualShader, Mode Spatial(3D))
+  - Add Fresnel Node
+  - Output into Alpha and Emission
+  - power 2
+  - ColorConstant to Albedo (lightblue) and/or Emission
+
 ## Enemies
 
 - set up **navigation server**
@@ -623,7 +633,29 @@ func _on_schalter_schalte_lampe(value) -> void:
 		animation_player.play_backwards("shine")
 ```
 
-### ToDos
+### Lava Shader
+- New Scene Area3D
+- Add MeshINstance, Plane, 10x10m, FaceZ
+- New Shader Material
+- New Shader (Visual, Spatial)
+  - Texture2D, NoiseTexture2D
+    - Inspector: Seamless
+    - Noise: New FastNoiseLite, Type Cellular
+    - Fractal None
+    - Cellular Jitter 0.75
+  - plug color texture into albedo
+  - add UVPanning Node, UV into UV of texture
+  - add Time node into pan
+  - UVPanning Scale to 0.01
+  - Copy all Nodes, new panning -0.02, New Noise Seamless, Fractal None, new Seed
+  - Combine both with multiply node
+  - smoothStep node inbetween, edge1 0.5
+  - inbetween Texture2D Gradient, color into UV, Color Mode
+  - adjust Gradient (bright yellow, orange, dark red)
+  - into Albedo and Emission
+- build Lava Pool *todo*
+
+## ToDos
 
 - Zaubertränke
 - Tower schießt
