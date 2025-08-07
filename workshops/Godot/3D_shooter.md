@@ -581,7 +581,9 @@ if object.is_in_group("impulse"):
 ```
 
 ### Lamp Switch
+
 - StaticBody with collider
+
 ```python
 extends StaticBody3D
 
@@ -597,8 +599,10 @@ func switch() -> void:
 	else:
 		emit_signal("schalte_lampe", false)
 ```
+
 - Lamp with Animationplayer
 - Listener on signal
+
 ```python
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 func _on_schalter_schalte_lampe(value) -> void:
@@ -607,3 +611,10 @@ func _on_schalter_schalte_lampe(value) -> void:
 	else :
 		animation_player.play_backwards("shine")
 ```
+
+### ToDos
+
+- Zaubertränke
+- Tower schießt
+- Automatic Doors
+- Treasure Boxes
