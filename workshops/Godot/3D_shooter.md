@@ -272,6 +272,14 @@ add_child(spark)
 spark.global_position = ray_cast_3d.get_collision_point()
 ```
 
+### Adding Weapon Spread
+- spread variable
+- randomly rotate Raycast
+```python
+rayCast.rotation = Vector3(randf_range(-spread, spread), ... )
+```
+- reset Raycast rotation to 0 in Button-release function
+
 ## Ammunition (simple mode -> adapt later for multiple types of ammunition
 
 - Add AmmoHandler node in Player Scene
@@ -460,7 +468,7 @@ if aggro and distance < 1.5 :
 ```python
 animation_player.play("attack")
 ```
-
+- *important* : Make Material Local in Scene !!!
 - define attack function in script
 - call method in animation
 
@@ -485,6 +493,9 @@ var object = ray_cast_3d.get_collider()
 if object.is_in_group("enemy"):
   object.reduce_health(damage)
 ```
+
+### Adding Hurt Animation to Enemy
+todo
 
 ### Giving Player Damage
 
@@ -618,3 +629,5 @@ func _on_schalter_schalte_lampe(value) -> void:
 - Tower schießt
 - Automatic Doors
 - Treasure Boxes
+- Flashlight on Camera
+  - Switch on and off with Button 
