@@ -579,3 +579,31 @@ if object.is_in_group("impulse"):
 	var impulse = (to-from).normalized() * 10
 	object.apply_impulse(impulse,(object.global_position - to))
 ```
+
+### Lamp Switch
+- StaticBody with collider
+```python
+extends StaticBody3D
+
+signal schalte_lampe
+
+var zustand := false
+
+func switch() -> void:
+	print("schalte!")
+	zustand = !zustand
+	if zustand:
+		emit_signal("schalte_lampe", true)
+	else:
+		emit_signal("schalte_lampe", false)
+```
+- Lamp with Animationplayer
+- Listener on signal
+```python
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+func _on_schalter_schalte_lampe(value) -> void:
+	if value :
+		animation_player.play("shine")
+	else :
+		animation_player.play_backwards("shine")
+```
