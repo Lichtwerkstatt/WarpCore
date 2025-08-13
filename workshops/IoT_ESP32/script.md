@@ -36,6 +36,7 @@
 
 ## <a name="Tutorials"></a> Tutorials and Ressources 
 * MQTT [Tutorial](https://www.survivingwithandroid.com/esp32-mqtt-client-publish-and-subscribe/) with ESP32 and HiveMQ
+* MQTT ESP32 Tutorial for [HiveMQ](https://medium.com/engineering-iot/connecting-esp32-to-hivemq-for-real-time-iot-data-streaming-with-mqtt-8813f48cb1a4)
 * MQTT [Tutorial](https://randomnerdtutorials.com/esp32-mqtt-publish-subscribe-arduino-ide/) with ESP32
 * ESP-32 [PinOut](https://cdn.shopify.com/s/files/1/1509/1638/files/ESP-32_NodeMCU_Developmentboard_Pinout.pdf?v=1609851295)
 
