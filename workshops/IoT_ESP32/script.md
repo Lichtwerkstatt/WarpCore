@@ -1,8 +1,8 @@
 # IoT with ESP-32 Workshop
 
-**Date** : January, 26th 2022  
-**Time** : 5pm  
-**Place** : Helmholtzweg 5 (Yellow Brick Building), Jena
+**Dates** : 
+- January, 26th 2022 / 5pm / Helmholtzweg 5 (Yellow Brick Building), Jena
+- August, 19th, 2025 / 12am / Eule, IOF Meeting
 
 ## Outline
 * [Materials](#Materials)
@@ -86,6 +86,7 @@ Serial.println("HTTP Server started...");
 server.handleClient();
 
 void handle_root(){
+  Serial.println("Someone requested root");
   String HTML = "<!DOCTYPE html><html>"
   "<body><b>HELLO WORLD!</b></body></html>";
   server.send(200, "text/html", HTML);
