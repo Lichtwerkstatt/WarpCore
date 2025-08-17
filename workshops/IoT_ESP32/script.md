@@ -32,6 +32,7 @@
 ## Preparation
 * install [Arduino IDE](https://www.arduino.cc/en/software)
 * install ESP32 libraries following this [Guide](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/)
+* Install pubsubclient library by Nick O’Leary
 * TroubleShooting [Guide](https://randomnerdtutorials.com/esp32-troubleshooting-guide/)
 
 ## <a name="Tutorials"></a> Tutorials and Ressources 
